@@ -1145,11 +1145,10 @@
     </div>
   </div>`;
 
-  /* ② 轉成節點；這是 1 行最短的做法 */
-  const adNode = document.createRange().createContextualFragment(adHTML).firstChild;
-
-  /* ③ 先 push 進陣列，待會一次塞進 Masonry */
-  newElements.push(adNode);
+// ★ 把左右空白砍掉 → 只留真正 <div>
+const fragment = document.createRange().createContextualFragment(adHTML.trim());
+const adNode   = fragment.firstElementChild;   // ← 這行用 firstElementChild
+newElements.push(adNode);
 
   /* ④ 把所有新節點加到瀑布流容器 */
   newElements.forEach(element => {
