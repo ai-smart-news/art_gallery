@@ -1030,131 +1030,75 @@
     }
 
     function renderImages(images) {
-  const newElements = [];
+      const newElements = [];
+      
+      images.forEach(imgObj => {
+        const item = document.createElement("div");
+        item.className = "grid-item";
+        
+        const card = document.createElement("div");
+        card.className = "card shadow-sm";
+        
+        const placeholder = document.createElement("div");
+        placeholder.className = "image-placeholder";
+        card.appendChild(placeholder);
+        
+        const img = document.createElement("img");
+        img.src = imgObj.thumb_path;
+        img.className = "card-img-top img-fluid";
+        img.loading = "lazy";
+        img.alt = imgObj.alt || "藝術攝影";
+        img.style.display = "none";
+        
+        img.onload = function() {
+          placeholder.remove();
+          this.style.display = "block";
+          this.classList.add('loaded');
+          
+          if (masonryInstance) {
+            masonryInstance.layout();
+          }
+        };
+        
+        img.onerror = function() {
+          placeholder.remove();
+          item.remove();
+        };
+        
+        // 1. 在 renderImages 函數中，找到圖片點擊事件的部分，替換為：
+img.addEventListener("click", () => {
+  // 顯示圖片
+  modalImage.src = imgObj.filename;
+  modalImage.style.transform = "scale(1)";
+  modalImage.classList.remove('zoomed');
+  
+  // 更新資訊面板
+  updateModalInfo(imgObj);
+  
+  imageModal.classList.add("show");
+});
 
-  images.forEach((imgObj, index) => {
-    const item = document.createElement("div");
-    item.className = "grid-item";
-
-    const card = document.createElement("div");
-    card.className = "card shadow-sm";
-
-    const placeholder = document.createElement("div");
-    placeholder.className = "image-placeholder";
-    card.appendChild(placeholder);
-
-    const img = document.createElement("img");
-    img.src = imgObj.thumb_path;
-    img.className = "card-img-top img-fluid";
-    img.loading = "lazy";
-    img.alt = imgObj.alt || "藝術攝影";
-    img.style.display = "none";
-
-    img.onload = function () {
-      placeholder.remove();
-      this.style.display = "block";
-      this.classList.add("loaded");
-
-      if (masonryInstance) {
-        masonryInstance.layout();
-      }
-    };
-
-    img.onerror = function () {
-      placeholder.remove();
-      item.remove();
-    };
-
-    // 圖片點擊彈出 modal
-    img.addEventListener("click", () => {
-      modalImage.src = imgObj.filename;
-      modalImage.style.transform = "scale(1)";
-      modalImage.classList.remove("zoomed");
-      updateModalInfo(imgObj);
-      imageModal.classList.add("show");
-    });
-
-    card.appendChild(img);
-    item.appendChild(card);
-    newElements.push(item);
-
-    // 每 6 張插入一則 Google 廣告
-    if ((index + 1) % 6 === 0) {
-      const adItem = createGoogleAdItem();
-      newElements.push(adItem);
-    }
-  });
-
-  newElements.forEach((el) => gallery.appendChild(el));
-
-  if (!masonryInstance) {
-    initMasonry();
-  } else {
-    masonryInstance.appended(newElements);
-  }
-
-  imagesLoaded(newElements, () => {
-    if (masonryInstance) {
-      masonryInstance.layout();
-    }
-    loading = false;
-  });
-}
-
-function createGoogleAdItem() {
-  const item = document.createElement("div");
-  item.className = "grid-item";
-
-  const card = document.createElement("div");
-  card.className = "card shadow-sm";
-
-  const adElement = document.createElement("ins");
-  adElement.className = "adsbygoogle";
-  adElement.style.display = "block";
-  adElement.setAttribute("data-ad-client", "ca-pub-5336208084094672");
-  adElement.setAttribute("data-ad-slot", "1168893193");
-  adElement.setAttribute("data-ad-format", "auto");
-  adElement.setAttribute("data-full-width-responsive", "true");
-
-  const fallback = document.createElement("div");
-  fallback.className = "ad-placeholder";
-  fallback.style.display = "none";
-  fallback.innerHTML = `<div style="padding: 20px; text-align: center; color: #666;">⚠️ 廣告載入失敗</div>`;
-
-  card.appendChild(adElement);
-  card.appendChild(fallback);
-  item.appendChild(card);
-
-  try {
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    setTimeout(() => {
-      if (adElement.innerHTML.trim() === '') {
-        adElement.style.display = 'none';
-        fallback.style.display = 'block';
-      }
-    }, 3000);
-  } catch (err) {
-    console.error("廣告載入錯誤：", err);
-    adElement.style.display = 'none';
-    fallback.style.display = 'block';
-  }
-
-  return item;
-}
-
+// 2. 添加新的函數來更新 modal 資訊：
 function updateModalInfo(imgObj) {
+  // 獲取資訊元素
   const infoFilename = document.getElementById('infoFilename');
   const infoPrompt = document.getElementById('infoPrompt');
   const infoDate = document.getElementById('infoDate');
   const imageDownload = document.getElementById('imageDownload');
-
+  
+  // 從檔案路徑提取日期和索引
   const pathParts = imgObj.filename.split('/');
   const fileName = pathParts[pathParts.length - 1];
   const datePart = pathParts[pathParts.length - 2];
-
+  
+  // 更新各個欄位
   infoFilename.textContent = fileName || '未知檔案';
   infoPrompt.textContent = imgObj.prompt || imgObj.alt || '暫無設計理念描述';
   infoDate.textContent = datePart ? datePart.replace(/_/g, '-') : '未知日期';
+  
+  // 從檔名提取編號
+  const indexMatch = fileName.match(/_(\d+)\.webp$/);
+  const indexNumber = indexMatch ? indexMatch[1] : '未知';
   imageDownload.href = imgObj.filename;
 }
 
