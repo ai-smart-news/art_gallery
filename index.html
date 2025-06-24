@@ -1033,26 +1033,6 @@
         });
     }
 
-// 建立一個與圖片格同階層的 grid-item，裡面放 <ins> 版位
-function createAdGridItem() {
-  const item = document.createElement("div");
-  item.className = "grid-item";
-
-  const ad = document.createElement("ins");
-  ad.className = "adsbygoogle";
-  ad.style.display = "block";
-  ad.setAttribute("data-ad-client", "ca-pub-5336208084094672");
-  ad.setAttribute("data-ad-slot",  "1168893193");
-  ad.setAttribute("data-ad-format","auto");
-  ad.setAttribute("data-full-width-responsive", "true");
-
-  item.appendChild(ad);
-
-  // 觸發 Google 送廣告
-  (window.adsbygoogle = window.adsbygoogle || []).push({});
-  return item;
-}
-
     function renderImages(images) {
       const newElements = [];
       
@@ -1151,12 +1131,10 @@ function createAdGridItem() {
         item.appendChild(card);
         newElements.push(item);
       });
-
-  /*** ① 每次執行都多塞一個 Ad 值 ***/
-  newElements.push(createAdGridItem());
-
-  /*** ② 跟原來一樣把所有新元素加入 Masonry ***/
-  newElements.forEach(el => gallery.appendChild(el));
+      
+      newElements.forEach(element => {
+        gallery.appendChild(element);
+      });
       
       if (!masonryInstance) {
         initMasonry();
