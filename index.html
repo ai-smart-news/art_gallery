@@ -1131,8 +1131,28 @@
         item.appendChild(card);
         newElements.push(item);
       });
-      
-      newElements.forEach(element => {
+
+      /* --- ① 用字串做一個 AdSense 版位 --- */
+  const adHTML = `
+  <div class="grid-item">
+    <div class="card shadow-sm">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5336208084094672"
+           data-ad-slot="1168893193"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+  </div>`;
+
+  /* ② 轉成節點；這是 1 行最短的做法 */
+  const adNode = document.createRange().createContextualFragment(adHTML).firstChild;
+
+  /* ③ 先 push 進陣列，待會一次塞進 Masonry */
+  newElements.push(adNode);
+
+  /* ④ 把所有新節點加到瀑布流容器 */
+  newElements.forEach(element => {
         gallery.appendChild(element);
       });
       
@@ -1142,12 +1162,15 @@
         masonryInstance.appended(newElements);
       }
       
-      imagesLoaded(newElements, () => {
-        if (masonryInstance) {
-          masonryInstance.layout();
-        }
-        loading = false;
-      });
+      /* ⑥ Masonry 排完後再觸發 Google 廣告載入  */
+  imagesLoaded(newElements, () => {
+    masonryInstance && masonryInstance.layout();
+
+    /* 一定要在節點進 DOM 之後呼叫 push()，廣告才會出現 */
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+
+    loading = false;
+  });
     }
 
     function loadPreviousDate() {
