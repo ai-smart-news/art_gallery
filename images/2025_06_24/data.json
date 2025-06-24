@@ -89,8 +89,7 @@
       "height": 1024,
       "style": "ultra-wide",
       "timestamp": "2025-06-24T07:20:15.609499Z",
-<<<<<<< Updated upstream
-      "thumb_path": "images/2025_06_24/2025_06_24_10.png"
+      "thumb_path": "images/2025_06_24/2025_06_24_10.webp"
     },
     {
       "filename": "images/2025_06_24/2025_06_24_11.webp",
@@ -100,9 +99,15 @@
       "height": 1024,
       "style": "square",
       "timestamp": "2025-06-24T07:38:38.703502Z"
-=======
-      "thumb_path": "images/2025_06_24/2025_06_24_10.webp"
->>>>>>> Stashed changes
+    },
+    {
+      "filename": "images/2025_06_24/2025_06_24_12.webp",
+      "thumb_path": "images/2025_06_24/2025_06_24_12_thumb.webp",
+      "prompt": "A monochrome digital tableau unveils a twilight huntress embodying stealth and power, her form poised within a swirling vortex eye that engulfs her in an otherworldly focus, shadows rendered in deep ink blue contrasted by flashes of signal red that trace her poised silhouette against a backdrop of volcanic haze swirling like molten smoke, intricate details of silicon smoke drifting lazily around her figure add an ethereal, almost surreal quality to the scene, as her piercing gaze hints at a predatory resolve amid the chaos, the interplay of stark monochrome tones and fiery accents evokes a dramatic tension, with textures emphasized through hyper-realistic rendering that blends CGI finesse and fine art sensibility, culminating in a captivating portrayal that immerses viewers into a nightmarish twilight realm where natural forces and sinister intent converge, capturing both the raw intensity of the environment and the enigmatic strength of the huntress in a densely detailed and visually mesmerizing digital masterpiece.",
+      "width": 1280,
+      "height": 1024,
+      "style": "landscape",
+      "timestamp": "2025-06-24T07:53:10.519090Z"
     }
   ]
 }
