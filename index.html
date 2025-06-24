@@ -433,13 +433,16 @@
     /* 結束訊息樣式 */
     #endMessage {
       font-size: 16px;
-      color: #6c757d;
+      color: white;
       padding: 30px 20px;
       margin-top: 20px;
-      border-top: 1px solid #dee2e6;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      background: gray;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .footer-style {
+      background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+      color: white;
     }
 
     @keyframes loading {
@@ -625,7 +628,7 @@
   </style>
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
-<body>
+<body style="background: #242F3E;">
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
