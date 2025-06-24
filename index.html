@@ -1155,6 +1155,8 @@
   newElements.forEach(element => {
         gallery.appendChild(element);
       });
+
+
       
       if (!masonryInstance) {
         initMasonry();
@@ -1162,15 +1164,13 @@
         masonryInstance.appended(newElements);
       }
       
-      /* ⑥ Masonry 排完後再觸發 Google 廣告載入  */
-  imagesLoaded(newElements, () => {
-    masonryInstance && masonryInstance.layout();
-
-    /* 一定要在節點進 DOM 之後呼叫 push()，廣告才會出現 */
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
-
-    loading = false;
-  });
+      imagesLoaded(newElements, () => {
+        if (masonryInstance) {
+          masonryInstance.layout();
+        }
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        loading = false;
+      });
     }
 
     function loadPreviousDate() {
