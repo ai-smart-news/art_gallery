@@ -623,6 +623,10 @@
 }
   </style>
   <link rel="icon" href="favicon.png" type="image/png">
+  <!-- index.html (或任一全域模板) -->
+<script async id="adsense-script"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5336208084094672"
+        crossorigin="anonymous"></script>
 </head>
 <body style="background: #242F3E;">
   <!-- Navbar -->
@@ -1029,6 +1033,26 @@
         });
     }
 
+// 建立一個與圖片格同階層的 grid-item，裡面放 <ins> 版位
+function createAdGridItem() {
+  const item = document.createElement("div");
+  item.className = "grid-item";
+
+  const ad = document.createElement("ins");
+  ad.className = "adsbygoogle";
+  ad.style.display = "block";
+  ad.setAttribute("data-ad-client", "ca-pub-5336208084094672");
+  ad.setAttribute("data-ad-slot",  "1168893193");
+  ad.setAttribute("data-ad-format","auto");
+  ad.setAttribute("data-full-width-responsive", "true");
+
+  item.appendChild(ad);
+
+  // 觸發 Google 送廣告
+  (window.adsbygoogle = window.adsbygoogle || []).push({});
+  return item;
+}
+
     function renderImages(images) {
       const newElements = [];
       
@@ -1066,71 +1090,73 @@
         };
         
         // 1. 在 renderImages 函數中，找到圖片點擊事件的部分，替換為：
-img.addEventListener("click", () => {
-  // 顯示圖片
-  modalImage.src = imgObj.filename;
-  modalImage.style.transform = "scale(1)";
-  modalImage.classList.remove('zoomed');
-  
-  // 更新資訊面板
-  updateModalInfo(imgObj);
-  
-  imageModal.classList.add("show");
-});
+        img.addEventListener("click", () => {
+          // 顯示圖片
+          modalImage.src = imgObj.filename;
+          modalImage.style.transform = "scale(1)";
+          modalImage.classList.remove('zoomed');
+          
+          // 更新資訊面板
+          updateModalInfo(imgObj);
+          
+          imageModal.classList.add("show");
+        });
 
-// 2. 添加新的函數來更新 modal 資訊：
-function updateModalInfo(imgObj) {
-  // 獲取資訊元素
-  const infoFilename = document.getElementById('infoFilename');
-  const infoPrompt = document.getElementById('infoPrompt');
-  const infoDate = document.getElementById('infoDate');
-  const imageDownload = document.getElementById('imageDownload');
-  
-  // 從檔案路徑提取日期和索引
-  const pathParts = imgObj.filename.split('/');
-  const fileName = pathParts[pathParts.length - 1];
-  const datePart = pathParts[pathParts.length - 2];
-  
-  // 更新各個欄位
-  infoFilename.textContent = fileName || '未知檔案';
-  infoPrompt.textContent = imgObj.prompt || imgObj.alt || '暫無設計理念描述';
-  infoDate.textContent = datePart ? datePart.replace(/_/g, '-') : '未知日期';
-  
-  // 從檔名提取編號
-  const indexMatch = fileName.match(/_(\d+)\.webp$/);
-  const indexNumber = indexMatch ? indexMatch[1] : '未知';
-  imageDownload.href = imgObj.filename;
-}
-
-// 3. 更新 modal 圖片點擊事件（縮放功能）：
-modalImage.addEventListener("click", (e) => {
-  e.stopPropagation();
-  const isZoomed = modalImage.classList.contains('zoomed');
-  if (isZoomed) {
-    modalImage.style.transform = "scale(1)";
-    modalImage.classList.remove('zoomed');
-  } else {
-    modalImage.style.transform = "scale(1.5)";
-    modalImage.classList.add('zoomed');
-  }
-});
-
-// 4. 更新 modal 關閉事件：
-imageModal.addEventListener("click", (e) => {
-  // 只有點擊到圖片容器或背景時才關閉，避免點擊資訊面板時關閉
-  if (e.target === imageModal || e.target.closest('.modal-image-container')) {
-    imageModal.classList.remove("show");
-  }
-});
+        // 2. 添加新的函數來更新 modal 資訊：
+        function updateModalInfo(imgObj) {
+          // 獲取資訊元素
+          const infoFilename = document.getElementById('infoFilename');
+          const infoPrompt = document.getElementById('infoPrompt');
+          const infoDate = document.getElementById('infoDate');
+          const imageDownload = document.getElementById('imageDownload');
+          
+          // 從檔案路徑提取日期和索引
+          const pathParts = imgObj.filename.split('/');
+          const fileName = pathParts[pathParts.length - 1];
+          const datePart = pathParts[pathParts.length - 2];
+          
+          // 更新各個欄位
+          infoFilename.textContent = fileName || '未知檔案';
+          infoPrompt.textContent = imgObj.prompt || imgObj.alt || '暫無設計理念描述';
+          infoDate.textContent = datePart ? datePart.replace(/_/g, '-') : '未知日期';
+          
+          // 從檔名提取編號
+          const indexMatch = fileName.match(/_(\d+)\.webp$/);
+          const indexNumber = indexMatch ? indexMatch[1] : '未知';
+          imageDownload.href = imgObj.filename;
+        }
+        
+        // 3. 更新 modal 圖片點擊事件（縮放功能）：
+        modalImage.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const isZoomed = modalImage.classList.contains('zoomed');
+          if (isZoomed) {
+            modalImage.style.transform = "scale(1)";
+            modalImage.classList.remove('zoomed');
+          } else {
+            modalImage.style.transform = "scale(1.5)";
+            modalImage.classList.add('zoomed');
+          }
+        });
+        
+        // 4. 更新 modal 關閉事件：
+        imageModal.addEventListener("click", (e) => {
+          // 只有點擊到圖片容器或背景時才關閉，避免點擊資訊面板時關閉
+          if (e.target === imageModal || e.target.closest('.modal-image-container')) {
+            imageModal.classList.remove("show");
+          }
+        });
         
         card.appendChild(img);
         item.appendChild(card);
         newElements.push(item);
       });
-      
-      newElements.forEach(element => {
-        gallery.appendChild(element);
-      });
+
+  /*** ① 每次執行都多塞一個 Ad 值 ***/
+  newElements.push(createAdGridItem());
+
+  /*** ② 跟原來一樣把所有新元素加入 Masonry ***/
+  newElements.forEach(el => gallery.appendChild(el));
       
       if (!masonryInstance) {
         initMasonry();
