@@ -1064,6 +1064,38 @@
           placeholder.remove();
           item.remove();
         };
+
+      // add google ad.
+      const item = document.createElement("div");
+      item.className = "grid-item";
+      const card = document.createElement("div");
+      card.className = "card shadow-sm";
+
+      // 創建 AdSense 廣告元素
+      const adElement = document.createElement('ins');
+      adElement.className = 'adsbygoogle';
+      adElement.style.display = 'block';
+      adElement.setAttribute('data-ad-client', 'ca-pub-5336208084094672');
+      adElement.setAttribute('data-ad-slot', '1168893193');
+      adElement.setAttribute('data-ad-format', 'auto');
+      adElement.setAttribute('data-full-width-responsive', 'true');
+      card.appendChild(adElement);
+      try {
+          // 初始化廣告
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          
+          // 如果廣告載入失敗，顯示備用內容
+          setTimeout(() => {
+              if (adElement.innerHTML.trim() === '') {
+                  adPlaceholder.innerHTML = `<div style="z-index: 1; position: relative;">error</div>`;
+              }
+          }, 3000);
+          
+      } catch (error) {
+          console.error('廣告載入錯誤:', error);
+          adPlaceholder.innerHTML = `<div style="z-index: 1; position: relative;">error</div>`;
+      }
+
         
         // 1. 在 renderImages 函數中，找到圖片點擊事件的部分，替換為：
 img.addEventListener("click", () => {
