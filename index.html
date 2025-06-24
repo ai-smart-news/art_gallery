@@ -7,13 +7,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <style>
-    /* 網站介紹區域樣式 */
+    /* 網站介紹區域樣式 - Cyberpunk 風格 */
     .hero-section {
-      background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #D2B48C 100%);
-      color: white;
+      background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 25%, #415a77 50%, #778da9 75%, #e0e1dd 100%);
+      color: #00f5ff;
       padding: 60px 0;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 0 50px rgba(0, 245, 255, 0.3);
     }
     
     .hero-section::before {
@@ -23,8 +24,27 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,0 1000,100 1000,0"/></svg>');
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%2300f5ff" opacity="0.1"><polygon points="0,0 1000,100 1000,0"/></svg>');
       background-size: cover;
+    }
+    
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(255, 20, 147, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(0, 245, 255, 0.2) 0%, transparent 50%),
+        linear-gradient(45deg, transparent 40%, rgba(138, 43, 226, 0.1) 50%, transparent 60%);
+      animation: cyberpunk-glow 4s ease-in-out infinite alternate;
+    }
+    
+    @keyframes cyberpunk-glow {
+      0% { opacity: 0.7; }
+      100% { opacity: 1; }
     }
     
     .hero-content {
@@ -36,24 +56,64 @@
       font-size: 3.5rem;
       font-weight: bold;
       margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      text-shadow: 
+        0 0 10px rgba(0, 245, 255, 0.8),
+        0 0 20px rgba(0, 245, 255, 0.6),
+        0 0 30px rgba(0, 245, 255, 0.4);
+      animation: neon-flicker 2s infinite alternate;
+    }
+    
+    @keyframes neon-flicker {
+      0%, 100% { 
+        text-shadow: 
+          0 0 10px rgba(0, 245, 255, 0.8),
+          0 0 20px rgba(0, 245, 255, 0.6),
+          0 0 30px rgba(0, 245, 255, 0.4);
+      }
+      50% { 
+        text-shadow: 
+          0 0 5px rgba(0, 245, 255, 1),
+          0 0 15px rgba(0, 245, 255, 0.8),
+          0 0 25px rgba(0, 245, 255, 0.6);
+      }
     }
     
     .hero-subtitle {
       font-size: 1.3rem;
       margin-bottom: 2rem;
-      opacity: 0.9;
+      color: #ff1493;
+      text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
     }
     
     .ai-badge {
       display: inline-block;
-      background: rgba(210, 180, 140, 0.3);
+      background: linear-gradient(45deg, rgba(0, 245, 255, 0.2), rgba(255, 20, 147, 0.2));
       padding: 8px 16px;
       border-radius: 25px;
       font-size: 0.9rem;
       margin-bottom: 1rem;
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(210, 180, 140, 0.5);
+      border: 2px solid rgba(0, 245, 255, 0.5);
+      color: #00f5ff;
+      box-shadow: 
+        0 0 20px rgba(0, 245, 255, 0.3),
+        inset 0 0 20px rgba(0, 245, 255, 0.1);
+      animation: pulse-border 3s infinite;
+    }
+    
+    @keyframes pulse-border {
+      0%, 100% { 
+        border-color: rgba(0, 245, 255, 0.5);
+        box-shadow: 
+          0 0 20px rgba(0, 245, 255, 0.3),
+          inset 0 0 20px rgba(0, 245, 255, 0.1);
+      }
+      50% { 
+        border-color: rgba(255, 20, 147, 0.7);
+        box-shadow: 
+          0 0 30px rgba(255, 20, 147, 0.4),
+          inset 0 0 20px rgba(255, 20, 147, 0.1);
+      }
     }
 
     /* 改良的幻燈片樣式 */
@@ -99,13 +159,13 @@
       display: block;
     }
     
-    /* 導航按鈕 */
+    /* 導航按鈕 - Cyberpunk 風格 */
     .carousel-nav {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(139, 69, 19, 0.9);
-      border: none;
+      background: linear-gradient(45deg, rgba(0, 245, 255, 0.8), rgba(255, 20, 147, 0.8));
+      border: 2px solid rgba(0, 245, 255, 0.5);
       width: 50px;
       height: 50px;
       border-radius: 50%;
@@ -115,12 +175,17 @@
       cursor: pointer;
       transition: all 0.3s ease;
       z-index: 10;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 
+        0 4px 12px rgba(0,0,0,0.15),
+        0 0 20px rgba(0, 245, 255, 0.3);
     }
     
     .carousel-nav:hover {
-      background: rgba(139, 69, 19, 1);
+      background: linear-gradient(45deg, rgba(0, 245, 255, 1), rgba(255, 20, 147, 1));
       transform: translateY(-50%) scale(1.1);
+      box-shadow: 
+        0 6px 16px rgba(0,0,0,0.2),
+        0 0 30px rgba(0, 245, 255, 0.6);
     }
     
     .carousel-nav.prev {
@@ -134,9 +199,10 @@
     .carousel-nav i {
       font-size: 18px;
       color: white;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
     }
     
-    /* 指示器 */
+    /* 指示器 - Cyberpunk 風格 */
     .carousel-indicators {
       position: absolute;
       bottom: 20px;
@@ -153,17 +219,21 @@
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.3);
       cursor: pointer;
       transition: all 0.3s ease;
       border: 2px solid transparent;
       flex-shrink: 0;
+      box-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
     }
     
     .carousel-indicator.active {
-      background: rgba(210, 180, 140, 1);
+      background: rgba(0, 245, 255, 1);
       transform: scale(1.2);
-      border-color: white;
+      border-color: rgba(255, 20, 147, 0.8);
+      box-shadow: 
+        0 0 15px rgba(0, 245, 255, 0.8),
+        0 0 25px rgba(0, 245, 255, 0.4);
     }
     
     /* 既有樣式保持不變 */
@@ -571,8 +641,8 @@
           <i class="fas fa-robot me-2"></i>AI 驅動 × 大數據分析
         </div>
         <h1 class="hero-title">AI Art Gallery</h1>
-        <p class="hero-subtitle">
-          透過先進 AI 技術與大數據分析，<br>
+        <p class="hero-subtitle" style="color:whitesmoke;">
+          透過先進 AI 技術與大數據分析，
           為您呈現最創新的 AI 藝術作品集
         </p>
         <div class="row justify-content-center mt-4">
