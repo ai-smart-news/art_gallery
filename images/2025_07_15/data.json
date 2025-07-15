@@ -153,6 +153,15 @@
       "height": 1920,
       "style": "vertical-hd",
       "timestamp": "2025-07-15T11:44:44.258607Z"
+    },
+    {
+      "filename": "images/2025_07_15/2025_07_15_18.webp",
+      "thumb_path": "images/2025_07_15/2025_07_15_18_thumb.webp",
+      "prompt": "From a worm's-eye view of a shadowy swamp, eerie flesh automata emerge in a dreamlike tableau, their distorted forms glistening in the ethereal, muted glow of dust beige and ocean steel, while fragmented mirrors cling to their surfaces, reflecting surreal reflections of the murky environment and creating a disorienting dance of light and dark, inviting the viewer into a hauntingly intricate realm where reality bends and morphs like a forgotten memory.",
+      "width": 1024,
+      "height": 1024,
+      "style": "square",
+      "timestamp": "2025-07-15T11:57:04.926919Z"
     }
   ]
 }
