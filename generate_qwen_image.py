@@ -271,6 +271,8 @@ image_index = len(existing_files) + 1
 # webp_path = result[0]
 
 # with Image.open(webp_path) as img:
+      width = img.width
+      height = img.height
 #     img.save(output_path, "WEBP", quality=85)  # 可調整品質（預設 80–85）
 
 # print(f"✅ 圖片已儲存：{output_path}")
