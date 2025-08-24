@@ -310,7 +310,7 @@ new_entry = {
     "prompt": image_prompt,
     "width": width,
     "height": height,
-    "style": size_choice["name"],
+    "style": size_choice,
     "timestamp": timestamp
 }
 
