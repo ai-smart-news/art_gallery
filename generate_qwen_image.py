@@ -244,7 +244,7 @@ image_sizes = ['1:1', '16:9', '9:16', '4:3', '3:4', '3:2', '2:3']
 size_choice = random.choice(image_sizes)
 
 # === Step 3: 調用 FLUX Space 模型產圖 ===
-client = Client("Qwen/Qwen-Image")
+client = Client_gradio("Qwen/Qwen-Image")
 
 result = client.predict(
 		prompt=image_prompt,
