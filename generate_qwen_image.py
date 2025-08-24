@@ -271,8 +271,6 @@ image_index = len(existing_files) + 1
 # webp_path = result[0]
 
 # with Image.open(webp_path) as img:
-      width = img.width
-      height = img.height
 #     img.save(output_path, "WEBP", quality=85)  # 可調整品質（預設 80–85）
 
 # print(f"✅ 圖片已儲存：{output_path}")
@@ -286,6 +284,8 @@ webp_path = result[0]  # ← 你的來源 .webp 圖檔路徑
 
 with Image.open(webp_path) as img:
     # 儲存原圖
+	width = img.width
+	height = img.height
     img.save(output_path, "WEBP", quality=85)
 
     # 建立縮圖
