@@ -239,30 +239,22 @@ image_prompt = response.choices[0].message.content.strip()
 print("🎨 Prompt:", image_prompt)
 
 # === Step 2: 定義並選取圖片尺寸（所有尺寸皆 ≥ 1024） ===
-image_sizes = [
-    {"name": "portrait", "width": 1024, "height": 1536},
-    {"name": "landscape", "width": 1280, "height": 1024},
-    {"name": "square", "width": 1024, "height": 1024},
-    {"name": "ultra-wide", "width": 1920, "height": 1024},
-    {"name": "vertical-hd", "width": 1080, "height": 1920}
-]
+image_sizes = ['1:1', '16:9', '9:16', '4:3', '3:4', '3:2', '2:3']
 
 size_choice = random.choice(image_sizes)
-width = size_choice["width"]
-height = size_choice["height"]
 
 # === Step 3: 調用 FLUX Space 模型產圖 ===
-client = Client_gradio("black-forest-labs/FLUX.1-dev")
+client = Client("Qwen/Qwen-Image")
 
 result = client.predict(
-    prompt=image_prompt,
-    seed=0,
-    randomize_seed=True,
-    width=width,
-    height=height,
-    guidance_scale=3.5,
-    num_inference_steps=28,
-    api_name="/infer"
+		prompt=image_prompt,
+		seed=0,
+		randomize_seed=True,
+		aspect_ratio=size_choice,
+		guidance_scale=4,
+		num_inference_steps=50,
+		prompt_enhance=True,
+		api_name="/infer"
 )
 
 # === Step 4: 建立日期資料夾與檔名 ===
