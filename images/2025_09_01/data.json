@@ -459,6 +459,15 @@
       "height": 1472,
       "style": "3:4",
       "timestamp": "2025-09-01T14:15:28.925757Z"
+    },
+    {
+      "filename": "images/2025_09_01/2025_09_01_52.webp",
+      "thumb_path": "images/2025_09_01/2025_09_01_52_thumb.webp",
+      "prompt": "",
+      "width": 1920,
+      "height": 1024,
+      "style": "ultra-wide",
+      "timestamp": "2025-09-01T14:23:18.674242Z"
     }
   ]
 }
