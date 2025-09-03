@@ -260,8 +260,8 @@ result = client.predict(
     randomize_seed=True,
     width=width,
     height=height,
-    guidance_scale=4.5,
-    num_inference_steps=28,
+    guidance_scale=3.5,
+    num_inference_steps=37,
     api_name="/infer"
 )
 
