@@ -360,6 +360,15 @@
       "height": 1664,
       "style": "9:16",
       "timestamp": "2025-09-04T07:29:42.397835Z"
+    },
+    {
+      "filename": "images/2025_09_04/2025_09_04_41.webp",
+      "thumb_path": "images/2025_09_04/2025_09_04_41_thumb.webp",
+      "prompt": "",
+      "width": 1024,
+      "height": 1024,
+      "style": "square",
+      "timestamp": "2025-09-04T07:34:49.475578Z"
     }
   ]
 }
