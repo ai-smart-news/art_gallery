@@ -900,6 +900,15 @@
       "height": 1104,
       "style": "4:3",
       "timestamp": "2025-09-07T19:11:29.389686Z"
+    },
+    {
+      "filename": "images/2025_09_07/2025_09_07_101.webp",
+      "thumb_path": "images/2025_09_07/2025_09_07_101_thumb.webp",
+      "prompt": "In a breathtaking vintage anime-inspired scene, a glass phoenix maiden glides gracefully through the swirling chromatic clouds, her ethereal form shimmering with hues of graphite and glacier blue, while delicate scrolls dance in the wind around her, creating a mesmerizing tapestry of movement and light that captures the essence of her mystical journey.",
+      "width": 1024,
+      "height": 1536,
+      "style": "portrait",
+      "timestamp": "2025-09-07T19:18:51.913712Z"
     }
   ]
 }
