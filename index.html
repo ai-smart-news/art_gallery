@@ -1,1243 +1,713 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Art Gallery | AI 藝廊</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <style>
-    /* 網站介紹區域樣式 - Cyberpunk 風格 */
-    .hero-section {
-      background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 25%, #415a77 50%, #778da9 75%, #e0e1dd 100%);
-      color: #00f5ff;
-      padding: 60px 0;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 0 50px rgba(0, 245, 255, 0.3);
-    }
-    
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%2300f5ff" opacity="0.1"><polygon points="0,0 1000,100 1000,0"/></svg>');
-      background-size: cover;
-    }
-    
-    .hero-section::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        radial-gradient(circle at 20% 30%, rgba(255, 20, 147, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(0, 245, 255, 0.2) 0%, transparent 50%),
-        linear-gradient(45deg, transparent 40%, rgba(138, 43, 226, 0.1) 50%, transparent 60%);
-      animation: cyberpunk-glow 4s ease-in-out infinite alternate;
-    }
-    
-    @keyframes cyberpunk-glow {
-      0% { opacity: 0.7; }
-      100% { opacity: 1; }
-    }
-    
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-    
-    .hero-title {
-      font-size: 3.5rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      text-shadow: 
-        0 0 10px rgba(0, 245, 255, 0.8),
-        0 0 20px rgba(0, 245, 255, 0.6),
-        0 0 30px rgba(0, 245, 255, 0.4);
-      animation: neon-flicker 2s infinite alternate;
-    }
-    
-    @keyframes neon-flicker {
-      0%, 100% { 
-        text-shadow: 
-          0 0 10px rgba(0, 245, 255, 0.8),
-          0 0 20px rgba(0, 245, 255, 0.6),
-          0 0 30px rgba(0, 245, 255, 0.4);
-      }
-      50% { 
-        text-shadow: 
-          0 0 5px rgba(0, 245, 255, 1),
-          0 0 15px rgba(0, 245, 255, 0.8),
-          0 0 25px rgba(0, 245, 255, 0.6);
-      }
-    }
-    
-    .hero-subtitle {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      color: #ff1493;
-      text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
-    }
-    
-    .ai-badge {
-      display: inline-block;
-      background: linear-gradient(45deg, rgba(0, 245, 255, 0.2), rgba(255, 20, 147, 0.2));
-      padding: 8px 16px;
-      border-radius: 25px;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-      backdrop-filter: blur(10px);
-      border: 2px solid rgba(0, 245, 255, 0.5);
-      color: #00f5ff;
-      box-shadow: 
-        0 0 20px rgba(0, 245, 255, 0.3),
-        inset 0 0 20px rgba(0, 245, 255, 0.1);
-      animation: pulse-border 3s infinite;
-    }
-    
-    @keyframes pulse-border {
-      0%, 100% { 
-        border-color: rgba(0, 245, 255, 0.5);
-        box-shadow: 
-          0 0 20px rgba(0, 245, 255, 0.3),
-          inset 0 0 20px rgba(0, 245, 255, 0.1);
-      }
-      50% { 
-        border-color: rgba(255, 20, 147, 0.7);
-        box-shadow: 
-          0 0 30px rgba(255, 20, 147, 0.4),
-          inset 0 0 20px rgba(255, 20, 147, 0.1);
-      }
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的短影音</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* 改良的幻燈片樣式 */
-    .enhanced-carousel {
-      position: relative;
-      max-width: 1200px;
-      margin: 0 auto;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    }
-    
-    .carousel-container {
-      position: relative;
-      width: 100%;
-      height: 500px;
-      overflow: hidden;
-      cursor: grab;
-      user-select: none;
-    }
-    
-    .carousel-container:active {
-      cursor: grabbing;
-    }
-    
-    .carousel-track {
-      display: flex;
-      height: 100%;
-      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      will-change: transform;
-    }
-    
-    .carousel-slide {
-      min-width: 100%;
-      height: 100%;
-      position: relative;
-    }
-    
-    .carousel-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    
-    /* 導航按鈕 - Cyberpunk 風格 */
-    .carousel-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: linear-gradient(45deg, rgba(0, 245, 255, 0.8), rgba(255, 20, 147, 0.8));
-      border: 2px solid rgba(0, 245, 255, 0.5);
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      z-index: 10;
-      box-shadow: 
-        0 4px 12px rgba(0,0,0,0.15),
-        0 0 20px rgba(0, 245, 255, 0.3);
-    }
-    
-    .carousel-nav:hover {
-      background: linear-gradient(45deg, rgba(0, 245, 255, 1), rgba(255, 20, 147, 1));
-      transform: translateY(-50%) scale(1.1);
-      box-shadow: 
-        0 6px 16px rgba(0,0,0,0.2),
-        0 0 30px rgba(0, 245, 255, 0.6);
-    }
-    
-    .carousel-nav.prev {
-      left: 20px;
-    }
-    
-    .carousel-nav.next {
-      right: 20px;
-    }
-    
-    .carousel-nav i {
-      font-size: 18px;
-      color: white;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    }
-    
-    /* 指示器 - Cyberpunk 風格 */
-    .carousel-indicators {
-      position: absolute;
-      bottom: 20px;
-      left: 35%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 10px;
-      z-index: 10;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .carousel-indicator {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.3);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border: 2px solid transparent;
-      flex-shrink: 0;
-      box-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
-    }
-    
-    .carousel-indicator.active {
-      background: rgba(0, 245, 255, 1);
-      transform: scale(1.2);
-      border-color: rgba(255, 20, 147, 0.8);
-      box-shadow: 
-        0 0 15px rgba(0, 245, 255, 0.8),
-        0 0 25px rgba(0, 245, 255, 0.4);
-    }
-    
-    /* 既有樣式保持不變 */
-    .masonry-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+            color: white;
+        }
 
-    .masonry-grid {
-      position: relative;
-    }
+        .app-wrapper {
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            max-height: 900px;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
 
-    .grid-sizer {
-      width: calc(25% - 12px);
-    }
+        .video-feed {
+            width: 100%;
+            height: 100%;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+            scrollbar-width: none;
+        }
 
-    .grid-item {
-      width: calc(25% - 12px);
-      margin-bottom: 15px;
-      box-sizing: border-box;
-    }
+        .video-feed::-webkit-scrollbar {
+            display: none;
+        }
 
-    .card {
-      border-radius: 12px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background: #fff;
-      border: none;
-    }
+        .video-card {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+            position: relative;
+            background: #000;
+        }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    }
+        .video-player {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
-    .card-img-top {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      display: block;
-      cursor: pointer;
-      transition: opacity 0.3s ease;
-    }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.1) 0%,
+                rgba(0,0,0,0) 20%,
+                rgba(0,0,0,0) 60%,
+                rgba(0,0,0,0.7) 100%
+            );
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 25px;
+            z-index: 1;
+        }
 
-    .card-img-top:not(.loaded) {
-      opacity: 0;
-    }
+        .controls {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            display: flex;
+            gap: 18px;
+            z-index: 3;
+        }
 
-    .card-img-top.loaded {
-      opacity: 1;
-    }
+        .control-btn {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.3em;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
 
-    /* Modal */
-    #imageModal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.95);
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
 
-    #imageModal.show {
-      display: flex;
-    }
+        .mute-unmute-btn {
+            display: none !important;
+        }
 
-    #modalImage {
-      max-width: 90%;
-      max-height: 90vh;
-      transition: transform 0.3s ease;
-      border-radius: 8px;
-      object-fit: contain;
-      cursor: zoom-in;
-    }
+        .side-actions {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+            z-index: 3;
+        }
 
-    #modalImage.zoomed {
-      cursor: zoom-out;
-    }
+        .action-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-size: 0.85em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
 
-    .close-btn {
-      position: absolute;
-      top: 15px;
-      right: 25px;
-      color: white;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: color 0.2s ease;
-      z-index: 2001;
-    }
+        .action-btn:hover {
+            transform: scale(1.1);
+        }
 
-    .close-btn:hover {
-      color: #ccc;
-    }
+        .action-btn i {
+            font-size: 2em;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s ease;
+        }
 
-    /* 響應式調整 */
-    @media (max-width: 1200px) {
-      .grid-sizer,
-      .grid-item {
-        width: calc(33.333% - 10px);
-      }
-      .hero-title {
-        font-size: 2.8rem;
-      }
-    }
+        .action-btn:hover i {
+            transform: scale(1.2);
+        }
 
-    @media (max-width: 768px) {
-      .grid-sizer,
-      .grid-item {
-        width: calc(50% - 8px);
-      }
-      .grid-item {
-        margin-bottom: 12px;
-      }
-      .hero-title {
-        font-size: 2.2rem;
-      }
-      .hero-subtitle {
-        font-size: 1.1rem;
-      }
-      .carousel-container {
-        height: 300px;
-      }
-      .carousel-nav {
-        width: 40px;
-        height: 40px;
-      }
-      .carousel-nav.prev {
-        left: 10px;
-      }
-      .carousel-nav.next {
-        right: 10px;
-      }
-    }
+        .action-btn:nth-child(1) i {
+            color: #ff3040;
+        }
 
-    @media (max-width: 576px) {
-      .grid-sizer,
-      .grid-item {
-        width: 100%;
-      }
-      .grid-item {
-        margin-bottom: 10px;
-      }
-      .masonry-container { 
-        padding: 0 10px; 
-      }
-      .hero-title {
-        font-size: 1.8rem;
-      }
-      .hero-section {
-        padding: 40px 0;
-      }
-      .carousel-container {
-        height: 250px;
-      }
-    }
+        .action-btn:nth-child(2) i {
+            color: #25d366;
+        }
 
-    /* 載入動畫 */
-    .loading {
-      text-align: center;
-      padding: 20px;
-      color: #666;
-      font-size: 16px;
-    }
+        .action-btn:nth-child(3) i {
+            color: #1da1f2;
+        }
 
-    .loading::after {
-      content: '';
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 2px solid #ccc;
-      border-radius: 50%;
-      border-top-color: #666;
-      animation: spin 1s ease-in-out infinite;
-      margin-left: 10px;
-    }
+        .play-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4em;
+            color: rgba(255, 255, 255, 0.9);
+            pointer-events: none;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 4;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+        }
 
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
+        .video-card.paused .play-indicator {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
 
-    /* 圖片載入骨架屏 */
-    .image-placeholder {
-      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-      background-size: 200% 100%;
-      animation: loading 1.5s infinite;
-      min-height: 200px;
-      border-radius: 12px;
-    }
+        /* Loading animation */
+        .video-card.loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            z-index: 5;
+        }
 
-    /* 結束訊息樣式 */
-    #endMessage {
-      font-size: 16px;
-      color: white;
-      padding: 30px 20px;
-      margin-top: 20px;
-      background: gray;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
 
-    @keyframes loading {
-      0% {
-        background-position: 200% 0;
-      }
-      100% {
-        background-position: -200% 0;
-      }
-    }
+        /* Progress bar */
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.3);
+            width: 100%;
+            z-index: 2;
+        }
 
-    /* 平滑動畫效果 */
-    * {
-      -webkit-tap-highlight-color: transparent;
-    }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff3040, #ff6b6b);
+            width: 0%;
+            transition: width 0.1s linear;
+        }
 
-    /* 替換原有的 #imageModal 和相關樣式 */
-#imageModal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
-  padding: 0;
-}
+        /* Hide default video controls */
+        video::-webkit-media-controls,
+        video::-webkit-media-controls-enclosure {
+            display: none !important;
+        }
 
-#imageModal.show {
-  display: flex;
-}
+        video {
+            -ms-media-controls-display: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+        }
 
-.modal-content-wrapper {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+        /* End of content indicator */
+        .end-indicator {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 40px;
+        }
 
-.modal-image-container {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  max-width: 70%;
-}
+        .end-indicator i {
+            font-size: 4em;
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
 
-#modalImage {
-  max-width: 100%;
-  max-height: 90vh;
-  transition: transform 0.3s ease;
-  border-radius: 8px;
-  object-fit: contain;
-  cursor: zoom-in;
-}
+        .end-indicator h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
 
-#modalImage.zoomed {
-  cursor: zoom-out;
-  transform: scale(1.5);
-}
+        .end-indicator p {
+            font-size: 1em;
+            opacity: 0.7;
+        }
 
-.modal-info-panel {
-  width: 350px;
-  height: 100%;
-  backdrop-filter: blur(20px);
-  padding: 30px;
-  overflow-y: auto;
-  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
-  color: white;
-  position: relative;
-}
+        /* Mobile responsive */
+        @media (max-width: 480px) {
+            .app-wrapper {
+                max-width: 100vw;
+                height: 100vh;
+                border-radius: 0;
+                border: none;
+            }
 
-.modal-info-panel::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="white" opacity="0.05"><circle cx="20" cy="20" r="2"/><circle cx="80" cy="40" r="1.5"/><circle cx="40" cy="70" r="1"/><circle cx="70" cy="85" r="2"/><circle cx="10" cy="60" r="1.5"/></svg>');
-  pointer-events: none;
-}
+            .video-overlay {
+                padding: 20px;
+            }
 
-.info-content {
-  position: relative;
-  z-index: 1;
-}
+            .controls {
+                left: 20px;
+                bottom: 20px;
+                gap: 15px;
+            }
 
-.info-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid rgba(210, 180, 140, 0.5);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+            .control-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2em;
+            }
 
-.info-section {
-  margin-bottom: 25px;
-}
-
-.info-label {
-  font-size: 0.9rem;
-  color: rgba(210, 180, 140, 1);
-  margin-bottom: 8px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.info-value {
-  font-size: 1rem;
-  line-height: 1.6;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 12px 15px;
-  border-radius: 8px;
-  border-left: 3px solid rgba(210, 180, 140, 0.8);
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 2001;
-
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(10px);
-}
-
-.close-btn:hover {
-
-  transform: scale(1.1);
-}
-
-/* 響應式設計 */
-@media (max-width: 1024px) {
-  .modal-info-panel {
-    width: 300px;
-  }
-  
-  .modal-image-container {
-    max-width: calc(100% - 300px);
-  }
-}
-
-@media (max-width: 768px) {
-  .modal-content-wrapper {
-    flex-direction: column;
-  }
-  
-  .modal-image-container {
-    max-width: 100%;
-    flex: 1;
-    padding: 10px;
-  }
-  
-  .modal-info-panel {
-    width: 100%;
-    height: 40%;
-    padding: 20px;
-  }
-  
-  #modalImage {
-    max-height: 60vh;
-  }
-}
-  </style>
-  <link rel="icon" href="favicon.png" type="image/png">
-  <!-- index.html (或任一全域模板) -->
-<script async id="adsense-script"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5336208084094672"
-        crossorigin="anonymous"></script>
+            .side-actions {
+                right: 15px;
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
-<body style="background: #242F3E;">
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="/">AI Art Gallery | AI 藝廊</a>
+<body>
+    <div class="app-wrapper">
+        <div class="video-feed">
+            <!-- Videos will be dynamically loaded here -->
+        </div>
     </div>
-  </nav>
 
-  <!-- Hero Section - 網站介紹 -->
-  <section class="hero-section">
-    <div class="container">
-      <div class="hero-content text-center">
-        <div class="ai-badge">
-          <i class="fas fa-robot me-2"></i>AI 驅動 × 大數據分析
-        </div>
-        <h1 class="hero-title">AI Art Gallery</h1>
-        <p class="hero-subtitle" style="color:whitesmoke;">
-          透過先進 AI 技術與大數據分析，
-          為您呈現最創新的 AI 藝術作品集
-        </p>
-        <div class="row justify-content-center mt-4">
-          <div class="col-md-8">
-            <p class="lead">
-              結合人工智慧美學演算法 | 精心策劃每一張藝術作品 | 帶來前所未有的視覺衝擊<br>
-              <font style="font-size: 10px; color: darkgray;"></font>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <script>
+        class VideoApp {
+            constructor() {
+                this.videoFeed = document.querySelector('.video-feed');
+                this.allVideos = []; // 所有影片的扁平化陣列
+                this.currentVideoIndex = 0;
+                this.preloadCount = 2;
+                this.observer = null;
+                this.loadedDates = new Set(); // 已載入的日期
+                this.isLoading = false;
+                this.hasMoreContent = true;
+                
+                this.init();
+            }
 
-  <!-- Enhanced Carousel 增強版幻燈片 -->
-  <div class="container my-5">
-    <div class="enhanced-carousel">
-      <div class="carousel-container" id="carouselContainer">
-        <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide">
-            <img src="https://ai-smart-news.github.io/art_gallery/images/2025_06_24/2025_06_24_02.webp" alt="藝術作品 1">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://ai-smart-news.github.io/art_gallery/images/2025_06_19/2025_06_19_32.webp" alt="藝術作品 2">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://ai-smart-news.github.io/art_gallery/images/2025_06_20/2025_06_20_15.webp" alt="藝術作品 3">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://ai-smart-news.github.io/art_gallery/images/2025_06_21/2025_06_21_09.webp" alt="藝術作品 4">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://ai-smart-news.github.io/art_gallery/images/2025_06_22/2025_06_22_26.webp" alt="時尚作品 5">
-          </div>
-        </div>
-        
-        <!-- 導航按鈕 -->
-        <button class="carousel-nav prev" id="prevBtn">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="carousel-nav next" id="nextBtn">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-        
-        <!-- 指示器 -->
-        <div class="carousel-indicators" id="carouselIndicators">
-          <!-- 由 JavaScript 動態生成 -->
-        </div>
-      </div>
-    </div>
-  </div>
+            // 取得當前日期，格式：2025_09_08
+            getCurrentDateString() {
+                const now = new Date();
+                const year = now.getFullYear();
+                const month = String(now.getMonth() + 1).padStart(2, '0');
+                const day = String(now.getDate()).padStart(2, '0');
+                return `${year}_${month}_${day}`;
+            }
 
-  <!-- Gallery -->
-  <div class="masonry-container my-5">
-    <div id="gallery" class="masonry-grid">
-      <div class="grid-sizer"></div>
-      <!-- 圖片將由 JavaScript 動態添加 -->
-    </div>
-    <div id="loading" class="loading" style="display: none;">
-      載入中
-    </div>
-    <div id="endMessage" class="text-center py-4" style="display: none;">
-      <div class="text-muted">
-        <i class="fas fa-check-circle me-2"></i>
-        已經到底囉！沒有更多圖片了
-      </div>
-    </div>
-  </div>
+            // 取得前一天的日期字串
+            getPreviousDateString(dateString) {
+                const [year, month, day] = dateString.split('_');
+                const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+                date.setDate(date.getDate() - 1);
+                
+                const prevYear = date.getFullYear();
+                const prevMonth = String(date.getMonth() + 1).padStart(2, '0');
+                const prevDay = String(date.getDate()).padStart(2, '0');
+                return `${prevYear}_${prevMonth}_${prevDay}`;
+            }
 
-  <!-- 替換原有的 Modal HTML -->
-<div id="imageModal" class="modal">
-  <span class="close-btn">×</span>
-  <div class="modal-content-wrapper">
-    <div class="modal-image-container">
-      <img id="modalImage" class="modal-content" alt="放大圖片" style="background-color: transparent;" />
-    </div>
-    <div class="modal-info-panel">
-      <div class="info-content">
-        <h3 class="info-title">
-          <i class="fas fa-palette"></i>
-          藝術作品資訊
-        </h3>
-        
-        <div class="info-section">
-          <div class="info-label">
-            <i class="fas fa-image me-2"></i>檔案名稱
-          </div>
-          <div class="info-value" id="infoFilename">載入中...</div>
-        </div>
-        
-        <div class="info-section">
-          <div class="info-label">
-            <i class="fas fa-lightbulb me-2"></i>設計理念
-          </div>
-          <div class="info-value" id="infoPrompt">載入中...</div>
-        </div>
-        
-        <div class="info-section">
-          <div class="info-label">
-            <i class="fas fa-calendar me-2"></i>創作日期
-          </div>
-          <div class="info-value" id="infoDate">載入中...</div>
-        </div>
-        
-        <div class="info-section">
-          <div class="info-label">
-            <i class="fas fa-download me-2"></i>原圖下載
-          </div>
-          <div class="info-value"><a href="/images/myw3schoolsimage.jpg" id="imageDownload" download>下載原圖</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            // 載入指定日期的 JSON 數據
+            async loadDateData(dateString) {
+                if (this.loadedDates.has(dateString)) {
+                    return [];
+                }
 
-  <!-- Footer -->
-  <footer class="text-center text-muted py-4 bg-dark">
-    <p style="color: white;">© 2025 AI藝廊 ArtGallery | 歡迎聯繫合作</p>
-  </footer>
+                try {
+                    const response = await fetch(`videos/${dateString}/data.json`);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    
+                    const data = await response.json();
+                    this.loadedDates.add(dateString);
+                    
+                    // 轉換數據格式，添加額外信息
+                    return data.videos.map((video, index) => ({
+                        id: `${dateString}_${index + 1}`,
+                        src: video.filename,
+                        thumb: video.thumb_path,
+                        timestamp: video.timestamp,
+                        date: dateString
+                    }));
+                } catch (error) {
+                    console.log(`無法載入 ${dateString} 的數據:`, error);
+                    return null;
+                }
+            }
 
-  <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  
-  <script>
-    // Enhanced Carousel 功能
-    class EnhancedCarousel {
-      constructor(container) {
-        this.container = container;
-        this.track = container.querySelector('#carouselTrack');
-        this.slides = container.querySelectorAll('.carousel-slide');
-        this.prevBtn = container.querySelector('#prevBtn');
-        this.nextBtn = container.querySelector('#nextBtn');
-        this.indicatorsContainer = container.querySelector('#carouselIndicators');
-        
-        this.currentIndex = 0;
-        this.slideCount = this.slides.length;
-        this.isDragging = false;
-        this.startX = 0;
-        this.currentX = 0;
-        this.initialTransform = 0;
-        
-        this.init();
-      }
-      
-      init() {
-        this.createIndicators();
-        this.bindEvents();
-        this.updateCarousel();
-        this.startAutoplay();
-      }
-      
-      createIndicators() {
-        for (let i = 0; i < this.slideCount; i++) {
-          const indicator = document.createElement('div');
-          indicator.className = 'carousel-indicator';
-          if (i === 0) indicator.classList.add('active');
-          indicator.addEventListener('click', () => this.goToSlide(i));
-          this.indicatorsContainer.appendChild(indicator);
+            // 載入更多影片數據
+            async loadMoreVideos() {
+                if (this.isLoading || !this.hasMoreContent) return;
+                
+                this.isLoading = true;
+                let dateToLoad = this.getCurrentDateString();
+                
+                // 如果已經有載入的日期，從最早的日期開始往前找
+                if (this.loadedDates.size > 0) {
+                    const sortedDates = Array.from(this.loadedDates).sort();
+                    dateToLoad = this.getPreviousDateString(sortedDates[0]);
+                }
+
+                let maxAttempts = 30; // 最多嘗試30天
+                let attempts = 0;
+
+                while (attempts < maxAttempts) {
+                    const newVideos = await this.loadDateData(dateToLoad);
+                    
+                    if (newVideos && newVideos.length > 0) {
+                        // 將新影片插入到陣列開頭
+                        this.allVideos.unshift(...newVideos);
+                        // 調整當前索引
+                        this.currentVideoIndex += newVideos.length;
+                        this.isLoading = false;
+                        return newVideos.length;
+                    } else if (newVideos === null) {
+                        // 載入失敗，嘗試前一天
+                        dateToLoad = this.getPreviousDateString(dateToLoad);
+                        attempts++;
+                    } else {
+                        // 空陣列，繼續嘗試前一天
+                        dateToLoad = this.getPreviousDateString(dateToLoad);
+                        attempts++;
+                    }
+                }
+
+                // 達到最大嘗試次數，沒有更多內容
+                this.hasMoreContent = false;
+                this.isLoading = false;
+                return 0;
+            }
+
+            // 初始化載入
+            async init() {
+                // 載入今天的影片
+                await this.loadMoreVideos();
+                
+                if (this.allVideos.length === 0) {
+                    this.showEndIndicator();
+                    return;
+                }
+
+                this.renderVideos(this.currentVideoIndex);
+                this.setupKeyboardEvents();
+            }
+
+            // 顯示結束指示器
+            showEndIndicator() {
+                this.videoFeed.innerHTML = `
+                    <div class="video-card">
+                        <div class="end-indicator">
+                            <i class="fas fa-film"></i>
+                            <h3>暫無更多影片</h3>
+                            <p>請稍後再來查看新內容</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // 創建進度條
+            createProgressBar() {
+                const progressBar = document.createElement('div');
+                progressBar.classList.add('progress-bar');
+                const progressFill = document.createElement('div');
+                progressFill.classList.add('progress-fill');
+                progressBar.appendChild(progressFill);
+                return progressBar;
+            }
+
+            // 更新進度條
+            updateProgressBar(video, progressFill) {
+                if (video.duration) {
+                    const progress = (video.currentTime / video.duration) * 100;
+                    progressFill.style.width = `${progress}%`;
+                }
+            }
+
+            // 創建單個影片卡片
+            createVideoCard(videoItem, index) {
+                const videoCard = document.createElement('div');
+                videoCard.classList.add('video-card', 'loading');
+                videoCard.dataset.index = index;
+
+                const videoPlayer = document.createElement('video');
+                videoPlayer.classList.add('video-player');
+                videoPlayer.src = videoItem.src;
+                videoPlayer.loop = true;
+                videoPlayer.muted = true;
+                videoPlayer.playsInline = true;
+                videoPlayer.preload = 'metadata';
+
+                const videoOverlay = document.createElement('div');
+                videoOverlay.classList.add('video-overlay');
+
+                const controls = document.createElement('div');
+                controls.classList.add('controls');
+                const playPauseBtn = document.createElement('button');
+                playPauseBtn.classList.add('control-btn', 'play-pause-btn');
+                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                controls.appendChild(playPauseBtn);
+
+                const sideActions = document.createElement('div');
+                sideActions.classList.add('side-actions');
+                const likeBtn = document.createElement('div');
+                likeBtn.classList.add('action-btn');
+                likeBtn.innerHTML = '<i class="fas fa-heart"></i><span>1.2M</span>';
+                const commentBtn = document.createElement('div');
+                commentBtn.classList.add('action-btn');
+                commentBtn.innerHTML = '<i class="fas fa-comment-dots"></i><span>5.7K</span>';
+                const shareBtn = document.createElement('div');
+                shareBtn.classList.add('action-btn');
+                shareBtn.innerHTML = '<i class="fas fa-share"></i><span>分享</span>';
+                sideActions.appendChild(likeBtn);
+                sideActions.appendChild(commentBtn);
+                sideActions.appendChild(shareBtn);
+
+                const playIndicator = document.createElement('div');
+                playIndicator.classList.add('play-indicator');
+                playIndicator.innerHTML = '<i class="fas fa-play"></i>';
+
+                const progressBar = this.createProgressBar();
+                const progressFill = progressBar.querySelector('.progress-fill');
+
+                videoCard.appendChild(videoPlayer);
+                videoCard.appendChild(videoOverlay);
+                videoCard.appendChild(controls);
+                videoCard.appendChild(sideActions);
+                videoCard.appendChild(playIndicator);
+                videoCard.appendChild(progressBar);
+
+                // 影片載入完成事件
+                videoPlayer.addEventListener('loadedmetadata', () => {
+                    videoCard.classList.remove('loading');
+                });
+
+                // 進度更新
+                videoPlayer.addEventListener('timeupdate', () => {
+                    this.updateProgressBar(videoPlayer, progressFill);
+                });
+
+                // 事件監聽器
+                playPauseBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    this.togglePlayPause(videoPlayer, playPauseBtn, videoCard, playIndicator);
+                });
+
+                videoPlayer.addEventListener('click', () => {
+                    this.togglePlayPause(videoPlayer, playPauseBtn, videoCard, playIndicator);
+                });
+
+                // 按讚動畫
+                likeBtn.addEventListener('click', () => {
+                    likeBtn.style.transform = 'scale(1.3)';
+                    setTimeout(() => {
+                        likeBtn.style.transform = 'scale(1)';
+                    }, 200);
+                });
+
+                videoCard.classList.add('paused');
+                return videoCard;
+            }
+
+            // 播放/暫停功能
+            togglePlayPause(video, btn, card, indicator) {
+                if (video.paused) {
+                    video.play().catch(e => console.error("Play error:", e));
+                    btn.innerHTML = '<i class="fas fa-pause"></i>';
+                    card.classList.remove('paused');
+                    indicator.innerHTML = '<i class="fas fa-pause"></i>';
+                } else {
+                    video.pause();
+                    btn.innerHTML = '<i class="fas fa-play"></i>';
+                    card.classList.add('paused');
+                    indicator.innerHTML = '<i class="fas fa-play"></i>';
+                }
+                
+                indicator.style.opacity = 1;
+                clearTimeout(video.indicatorTimeout);
+                video.indicatorTimeout = setTimeout(() => {
+                    indicator.style.opacity = 0;
+                }, 800);
+            }
+
+            // 渲染影片
+            renderVideos(centerIndex) {
+                this.videoFeed.innerHTML = '';
+                const frag = document.createDocumentFragment();
+
+                const start = Math.max(0, centerIndex - this.preloadCount);
+                const end = Math.min(this.allVideos.length - 1, centerIndex + this.preloadCount);
+
+                for (let i = start; i <= end; i++) {
+                    if (this.allVideos[i]) {
+                        const videoCard = this.createVideoCard(this.allVideos[i], i);
+                        frag.appendChild(videoCard);
+                    }
+                }
+                
+                this.videoFeed.appendChild(frag);
+                this.initObserver();
+                
+                // 檢查是否需要載入更多內容
+                if (centerIndex < 5 && this.hasMoreContent) {
+                    this.loadMoreVideos().then(newCount => {
+                        if (newCount > 0) {
+                            // 重新渲染以包含新載入的影片
+                            this.renderVideos(this.currentVideoIndex);
+                        }
+                    });
+                }
+            }
+
+            // 初始化觀察器
+            initObserver() {
+                if (this.observer) this.observer.disconnect();
+
+                const options = {
+                    root: this.videoFeed,
+                    rootMargin: '0px',
+                    threshold: 0.8
+                };
+
+                this.observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        const videoCard = entry.target;
+                        const video = videoCard.querySelector('.video-player');
+                        const index = parseInt(videoCard.dataset.index);
+
+                        if (entry.isIntersecting) {
+                            if (index === this.currentVideoIndex) {
+                                video.play().catch(e => console.error("Play error:", e));
+                                videoCard.classList.remove('paused');
+                                videoCard.querySelector('.play-pause-btn').innerHTML = '<i class="fas fa-pause"></i>';
+                            } else {
+                                video.pause();
+                                videoCard.classList.add('paused');
+                                videoCard.querySelector('.play-pause-btn').innerHTML = '<i class="fas fa-play"></i>';
+                            }
+
+                            if (index !== this.currentVideoIndex) {
+                                this.currentVideoIndex = index;
+                                this.renderVideos(this.currentVideoIndex);
+                                const currentCard = this.videoFeed.querySelector(`[data-index="${this.currentVideoIndex}"]`);
+                                if (currentCard) {
+                                    this.videoFeed.scrollTo({
+                                        top: currentCard.offsetTop,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }
+                        } else {
+                            video.pause();
+                            videoCard.classList.add('paused');
+                            videoCard.querySelector('.play-pause-btn').innerHTML = '<i class="fas fa-play"></i>';
+                        }
+                    });
+                }, options);
+
+                this.videoFeed.querySelectorAll('.video-card').forEach(card => {
+                    this.observer.observe(card);
+                });
+            }
+
+            // 設置鍵盤事件
+            setupKeyboardEvents() {
+                document.addEventListener('keydown', (e) => {
+                    const currentVideoCard = this.videoFeed.querySelector(`[data-index="${this.currentVideoIndex}"]`);
+                    if (!currentVideoCard) return;
+
+                    const video = currentVideoCard.querySelector('.video-player');
+                    const playPauseBtn = currentVideoCard.querySelector('.play-pause-btn');
+                    const playIndicator = currentVideoCard.querySelector('.play-indicator');
+
+                    switch (e.code) {
+                        case 'Space':
+                            e.preventDefault();
+                            this.togglePlayPause(video, playPauseBtn, currentVideoCard, playIndicator);
+                            break;
+                        case 'ArrowDown':
+                        case 'PageDown':
+                            e.preventDefault();
+                            if (this.currentVideoIndex < this.allVideos.length - 1) {
+                                const nextIndex = this.currentVideoIndex + 1;
+                                const nextCard = this.videoFeed.querySelector(`[data-index="${nextIndex}"]`);
+                                if (nextCard) {
+                                    this.videoFeed.scrollTo({
+                                        top: nextCard.offsetTop,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }
+                            break;
+                        case 'ArrowUp':
+                        case 'PageUp':
+                            e.preventDefault();
+                            if (this.currentVideoIndex > 0) {
+                                const prevIndex = this.currentVideoIndex - 1;
+                                const prevCard = this.videoFeed.querySelector(`[data-index="${prevIndex}"]`);
+                                if (prevCard) {
+                                    this.videoFeed.scrollTo({
+                                        top: prevCard.offsetTop,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }
+                            break;
+                    }
+                });
+            }
         }
-      }
-      
-      bindEvents() {
-        // 按鈕事件
-        this.prevBtn.addEventListener('click', () => this.prevSlide());
-        this.nextBtn.addEventListener('click', () => this.nextSlide());
-        
-        // 觸控/滑鼠拖拽事件
-        this.container.addEventListener('mousedown', (e) => this.dragStart(e));
-        this.container.addEventListener('touchstart', (e) => this.dragStart(e), { passive: true });
-        
-        document.addEventListener('mousemove', (e) => this.dragMove(e));
-        document.addEventListener('touchmove', (e) => this.dragMove(e), { passive: true });
-        
-        document.addEventListener('mouseup', () => this.dragEnd());
-        document.addEventListener('touchend', () => this.dragEnd());
-        
-        // 鍵盤事件
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowLeft') this.prevSlide();
-          if (e.key === 'ArrowRight') this.nextSlide();
+
+        // 初始化應用
+        document.addEventListener('DOMContentLoaded', () => {
+            new VideoApp();
         });
-        
-        // 暫停/恢復自動播放
-        this.container.addEventListener('mouseenter', () => this.pauseAutoplay());
-        this.container.addEventListener('mouseleave', () => this.startAutoplay());
-      }
-      
-      dragStart(e) {
-        this.isDragging = true;
-        this.startX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
-        this.initialTransform = -this.currentIndex * 100;
-        this.track.style.transition = 'none';
-        this.pauseAutoplay();
-      }
-      
-      dragMove(e) {
-        if (!this.isDragging) return;
-        
-        e.preventDefault();
-        this.currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
-        const deltaX = this.currentX - this.startX;
-        const movePercent = (deltaX / this.container.offsetWidth) * 100;
-        
-        this.track.style.transform = `translateX(${this.initialTransform + movePercent}%)`;
-      }
-      
-      dragEnd() {
-        if (!this.isDragging) return;
-        
-        this.isDragging = false;
-        const deltaX = this.currentX - this.startX;
-        const threshold = this.container.offsetWidth * 0.1;
-        
-        this.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        
-        if (Math.abs(deltaX) > threshold) {
-          if (deltaX > 0) {
-            this.prevSlide();
-          } else {
-            this.nextSlide();
-          }
-        } else {
-          this.updateCarousel();
-        }
-        
-        this.startAutoplay();
-      }
-      
-      goToSlide(index) {
-        this.currentIndex = index;
-        this.updateCarousel();
-        this.pauseAutoplay();
-        this.startAutoplay();
-      }
-      
-      nextSlide() {
-        this.currentIndex = (this.currentIndex + 1) % this.slideCount;
-        this.updateCarousel();
-      }
-      
-      prevSlide() {
-        this.currentIndex = (this.currentIndex - 1 + this.slideCount) % this.slideCount;
-        this.updateCarousel();
-      }
-      
-      updateCarousel() {
-        const translateX = -this.currentIndex * 100;
-        this.track.style.transform = `translateX(${translateX}%)`;
-        
-        // 更新指示器
-        const indicators = this.indicatorsContainer.querySelectorAll('.carousel-indicator');
-        indicators.forEach((indicator, index) => {
-          indicator.classList.toggle('active', index === this.currentIndex);
-        });
-      }
-      
-      startAutoplay() {
-        this.pauseAutoplay();
-        this.autoplayTimer = setInterval(() => {
-          this.nextSlide();
-        }, 5000);
-      }
-      
-      pauseAutoplay() {
-        if (this.autoplayTimer) {
-          clearInterval(this.autoplayTimer);
-        }
-      }
-    }
-    
-    // 初始化增強版輪播
-    document.addEventListener('DOMContentLoaded', () => {
-      const carouselContainer = document.getElementById('carouselContainer');
-      new EnhancedCarousel(carouselContainer);
-    });
-
-    // 原有的圖片瀏覽功能保持不變
-    const gallery = document.getElementById("gallery");
-    const imageModal = document.getElementById("imageModal");
-    const modalImage = document.getElementById("modalImage");
-    const closeBtn = document.querySelector(".close-btn");
-    const loadingDiv = document.getElementById("loading");
-    const endMessageDiv = document.getElementById("endMessage");
-    let currentDate = new Date();
-    let loading = false;
-    let hasReachedEnd = false;
-    const loadedDates = new Set();
-    let masonryInstance = null;
-
-    function formatDate(date) {
-      return date.toISOString().split("T")[0].replace(/-/g, "_");
-    }
-
-    function showLoading() {
-      if (!hasReachedEnd) {
-        loadingDiv.style.display = 'block';
-      }
-    }
-
-    function hideLoading() {
-      loadingDiv.style.display = 'none';
-    }
-
-    function showEndMessage() {
-      hideLoading();
-      endMessageDiv.style.display = 'block';
-      hasReachedEnd = true;
-    }
-
-    function initMasonry() {
-      if (!masonryInstance) {
-        masonryInstance = new Masonry(gallery, {
-          itemSelector: '.grid-item',
-          columnWidth: '.grid-sizer',
-          gutter: 15,
-          percentPosition: true
-        });
-      }
-    }
-
-    function loadImageJson(dateStr, retryCount = 0) {
-      if (hasReachedEnd) {
-        return;
-      }
-
-      if (loadedDates.has(dateStr)) {
-        loadPreviousDate();
-        return;
-      }
-
-      if (retryCount >= 30) {
-        console.log(`已重試 ${retryCount} 天，已到底部`);
-        showEndMessage();
-        loading = false;
-        return;
-      }
-
-      showLoading();
-      const jsonUrl = `images/${dateStr}/data.json`;
-      
-      console.log(`嘗試載入: ${jsonUrl} (重試次數: ${retryCount})`);
-      
-      fetch(jsonUrl)
-        .then(res => {
-          if (!res.ok) {
-            throw new Error(`HTTP ${res.status}: JSON 不存在 - ${jsonUrl}`);
-          }
-          return res.json();
-        })
-        .then(data => {
-          if (!data.images || data.images.length === 0) {
-            console.log(`${dateStr} 的圖片數據為空，嘗試前一天`);
-            currentDate.setDate(currentDate.getDate() - 1);
-            const newDateStr = formatDate(currentDate);
-            setTimeout(() => {
-              loadImageJson(newDateStr, retryCount + 1);
-            }, 100);
-            return;
-          }
-          
-          console.log(`成功載入 ${dateStr}，共 ${data.images.length} 張圖片`);
-          loadedDates.add(dateStr);
-          renderImages(data.images);
-          
-          setTimeout(() => {
-            loadPreviousDate();
-          }, 200);
-        })
-        .catch(error => {
-          console.log(`載入失敗: ${error.message}`);
-          currentDate.setDate(currentDate.getDate() - 1);
-          const newDateStr = formatDate(currentDate);
-          setTimeout(() => {
-            loadImageJson(newDateStr, retryCount + 1);
-          }, 100);
-        })
-        .finally(() => {
-          if (retryCount === 0) {
-            setTimeout(() => {
-              hideLoading();
-            }, 500);
-          }
-        });
-    }
-
-    function renderImages(images) {
-      const newElements = [];
-      
-      images.forEach(imgObj => {
-        const item = document.createElement("div");
-        item.className = "grid-item";
-        
-        const card = document.createElement("div");
-        card.className = "card shadow-sm";
-        
-        const placeholder = document.createElement("div");
-        placeholder.className = "image-placeholder";
-        card.appendChild(placeholder);
-        
-        const img = document.createElement("img");
-        img.src = imgObj.thumb_path;
-        img.className = "card-img-top img-fluid";
-        img.loading = "lazy";
-        img.alt = imgObj.alt || "藝術攝影";
-        img.style.display = "none";
-        
-        img.onload = function() {
-          placeholder.remove();
-          this.style.display = "block";
-          this.classList.add('loaded');
-          
-          if (masonryInstance) {
-            masonryInstance.layout();
-          }
-        };
-        
-        img.onerror = function() {
-          placeholder.remove();
-          item.remove();
-        };
-        
-        // 1. 在 renderImages 函數中，找到圖片點擊事件的部分，替換為：
-        img.addEventListener("click", () => {
-          // 顯示圖片
-          modalImage.src = imgObj.filename;
-          modalImage.style.transform = "scale(1)";
-          modalImage.classList.remove('zoomed');
-          
-          // 更新資訊面板
-          updateModalInfo(imgObj);
-          
-          imageModal.classList.add("show");
-        });
-
-        // 2. 添加新的函數來更新 modal 資訊：
-        function updateModalInfo(imgObj) {
-          // 獲取資訊元素
-          const infoFilename = document.getElementById('infoFilename');
-          const infoPrompt = document.getElementById('infoPrompt');
-          const infoDate = document.getElementById('infoDate');
-          const imageDownload = document.getElementById('imageDownload');
-          
-          // 從檔案路徑提取日期和索引
-          const pathParts = imgObj.filename.split('/');
-          const fileName = pathParts[pathParts.length - 1];
-          const datePart = pathParts[pathParts.length - 2];
-          
-          // 更新各個欄位
-          infoFilename.textContent = fileName || '未知檔案';
-          infoPrompt.textContent = imgObj.prompt || imgObj.alt || '暫無設計理念描述';
-          infoDate.textContent = datePart ? datePart.replace(/_/g, '-') : '未知日期';
-          
-          // 從檔名提取編號
-          const indexMatch = fileName.match(/_(\d+)\.webp$/);
-          const indexNumber = indexMatch ? indexMatch[1] : '未知';
-          imageDownload.href = imgObj.filename;
-        }
-        
-        // 3. 更新 modal 圖片點擊事件（縮放功能）：
-        modalImage.addEventListener("click", (e) => {
-          e.stopPropagation();
-          const isZoomed = modalImage.classList.contains('zoomed');
-          if (isZoomed) {
-            modalImage.style.transform = "scale(1)";
-            modalImage.classList.remove('zoomed');
-          } else {
-            modalImage.style.transform = "scale(1.5)";
-            modalImage.classList.add('zoomed');
-          }
-        });
-        
-        // 4. 更新 modal 關閉事件：
-        imageModal.addEventListener("click", (e) => {
-          // 只有點擊到圖片容器或背景時才關閉，避免點擊資訊面板時關閉
-          if (e.target === imageModal || e.target.closest('.modal-image-container')) {
-            imageModal.classList.remove("show");
-          }
-        });
-        
-        card.appendChild(img);
-        item.appendChild(card);
-        newElements.push(item);
-      });
-
-      /* --- ① 用字串做一個 AdSense 版位 --- */
-  const adHTML = `
-  <div class="grid-item">
-    <div class="card shadow-sm">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-5336208084094672"
-           data-ad-slot="1168893193"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-    </div>
-  </div>`;
-
-// ★ 把左右空白砍掉 → 只留真正 <div>
-const fragment = document.createRange().createContextualFragment(adHTML.trim());
-const adNode   = fragment.firstElementChild;   // ← 這行用 firstElementChild
-newElements.push(adNode);
-
-  /* ④ 把所有新節點加到瀑布流容器 */
-  newElements.forEach(element => {
-        gallery.appendChild(element);
-        console.log(element)
-      });
-
-
-      
-      if (!masonryInstance) {
-        initMasonry();
-      } else {
-        masonryInstance.appended(newElements);
-      }
-      
-      imagesLoaded(newElements, () => {
-        if (masonryInstance) {
-          masonryInstance.layout();
-        }
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-        loading = false;
-      });
-    }
-
-    function loadPreviousDate() {
-      currentDate.setDate(currentDate.getDate() - 1);
-      setTimeout(() => {
-        loadNextBatch();
-      }, 200);
-    }
-
-    function loadNextBatch() {
-      if (loading || hasReachedEnd) return;
-      loading = true;
-      const dateStr = formatDate(currentDate);
-      loadImageJson(dateStr, 0);
-    }
-
-    console.log(`開始載入，初始日期: ${formatDate(currentDate)}`);
-    loadNextBatch();
-
-    let scrollTimeout;
-    window.addEventListener("scroll", () => {
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        if (!hasReachedEnd && window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
-          loadNextBatch();
-        }
-      }, 100);
-    });
-
-    // Modal 事件
-    closeBtn.addEventListener("click", () => {
-      imageModal.classList.remove("show");
-    });
-
-    modalImage.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const isZoomed = modalImage.classList.contains('zoomed');
-      if (isZoomed) {
-        modalImage.style.transform = "scale(1)";
-        modalImage.classList.remove('zoomed');
-      } else {
-        modalImage.style.transform = "scale(1.5)";
-        modalImage.classList.add('zoomed');
-      }
-    });
-
-    imageModal.addEventListener("click", (e) => {
-      if (e.target === imageModal) {
-        imageModal.classList.remove("show");
-      }
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        imageModal.classList.remove("show");
-      }
-    });
-
-    let resizeTimeout;
-    window.addEventListener("resize", () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        if (masonryInstance) {
-          masonryInstance.layout();
-        }
-      }, 250);
-    });
-  </script>
+    </script>
 </body>
 </html>
