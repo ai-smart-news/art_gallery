@@ -1053,6 +1053,15 @@
       "height": 1920,
       "style": "vertical-hd",
       "timestamp": "2025-09-10T20:26:59.017611Z"
+    },
+    {
+      "filename": "images/2025_09_10/2025_09_10_118.webp",
+      "thumb_path": "images/2025_09_10/2025_09_10_118_thumb.webp",
+      "prompt": "",
+      "width": 1024,
+      "height": 1024,
+      "style": "square",
+      "timestamp": "2025-09-10T20:31:10.440985Z"
     }
   ]
 }
