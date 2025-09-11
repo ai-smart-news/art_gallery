@@ -540,6 +540,15 @@
       "height": 1056,
       "style": "3:2",
       "timestamp": "2025-09-11T12:30:09.034630Z"
+    },
+    {
+      "filename": "images/2025_09_11/2025_09_11_61.webp",
+      "thumb_path": "images/2025_09_11/2025_09_11_61_thumb.webp",
+      "prompt": "In a dimly lit glade, a mutant doe with crystalline antlers stands poised, its form adorned with delicate webs that shimmer like forgotten stars, while an intricate ink sketch style captures the ethereal beauty of its spiraled silhouette, where flickering violet light dances over brass-hued accents, creating an enchanting atmosphere that intertwines nature with the surreal, inviting viewers to lose themselves in the elegant interplay of shadow and light.",
+      "width": 1024,
+      "height": 1024,
+      "style": "square",
+      "timestamp": "2025-09-11T12:48:55.340581Z"
     }
   ]
 }
