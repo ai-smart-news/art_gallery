@@ -1107,6 +1107,15 @@
       "height": 1024,
       "style": "square",
       "timestamp": "2025-09-17T19:41:18.364392Z"
+    },
+    {
+      "filename": "images/2025_09_17/2025_09_17_124.webp",
+      "thumb_path": "images/2025_09_17/2025_09_17_124_thumb.webp",
+      "prompt": "In a whimsical comic book scene, a stunning glass phoenix maiden soars through a dimly lit tunnel, her iridescent wings casting shimmering pastel gradients against the walls, while the flickering lights reveal hints of rust flakes adorning the tunnel's surface, all set against the enchanting backdrop of swirling dust trails that follow her graceful flight, evoking a sense of ethereal wonder and fiery resilience that captures the eye and ignites the imagination.",
+      "width": 1328,
+      "height": 1328,
+      "style": "1:1",
+      "timestamp": "2025-09-17T19:50:17.357822Z"
     }
   ]
 }
