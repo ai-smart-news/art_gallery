@@ -792,6 +792,15 @@
       "height": 1024,
       "style": "ultra-wide",
       "timestamp": "2025-09-20T14:09:09.740922Z"
+    },
+    {
+      "filename": "images/2025_09_20/2025_09_20_89.webp",
+      "thumb_path": "images/2025_09_20/2025_09_20_89_thumb.webp",
+      "prompt": "Beneath an ethereal aurora haze, a majestic snow crow matron perches regally atop a twisted, biomechanical branch, her intricate mechanical bones glinting in dim shades of cyan and brown, as she gazes down upon a fantastical arcane punk landscape brimming with ancient machinery and surreal flora, whispering secrets of a forgotten world where magic intertwines with the remnants of a lost civilization.",
+      "width": 1328,
+      "height": 1328,
+      "style": "1:1",
+      "timestamp": "2025-09-20T14:13:08.518008Z"
     }
   ]
 }
