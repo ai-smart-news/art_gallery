@@ -900,6 +900,15 @@
       "height": 928,
       "style": "16:9",
       "timestamp": "2025-09-23T16:20:32.964843Z"
+    },
+    {
+      "filename": "images/2025_09_23/2025_09_23_101.webp",
+      "thumb_path": "images/2025_09_23/2025_09_23_101_thumb.webp",
+      "prompt": "Amidst a tumultuous sky cloaked in swirling storm clouds, a majestic castle, seemingly carved from ivory silk and weathered concrete, floats serenely in the air, its silhouette beautifully framed by the dramatic backdrop while intricate tendrils of organic moss cascade down its grand towers, glistening with droplets of rain as an ethereal light captures the ornate details of its high fantasy architecture, evoking a sense of wonder and reverence for this enchanting realm that seems suspended between reality and enchantment.",
+      "width": 1920,
+      "height": 1024,
+      "style": "ultra-wide",
+      "timestamp": "2025-09-23T16:33:25.971431Z"
     }
   ]
 }
