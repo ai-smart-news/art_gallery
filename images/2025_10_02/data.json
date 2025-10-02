@@ -252,6 +252,15 @@
       "height": 1472,
       "style": "3:4",
       "timestamp": "2025-10-02T05:50:28.121177Z"
+    },
+    {
+      "filename": "images/2025_10_02/2025_10_02_29.webp",
+      "thumb_path": "images/2025_10_02/2025_10_02_29_thumb.webp",
+      "prompt": "{'messages': [{'role': 'user', 'content': '\\nPlease generate a single-sentence AI image prompt suitable for high-detail image generation models (like FLUX or Stable Diffusion).\\n\\nUse the following creative inspiration:\\n\\n- **Subject(s)**: golem priestess\\n- **Art Style(s)**: generative fractal\\n- **Lighting / Mood**: neon reflections\\n- **Color Palette**: sky rose and ember\\n- **Perspective**: minimal tilt-frame\\n- **Extra Details**: shifting ink shapes\\n\\nDo not list the elements explicitly in the sentence. Instead, use these keywords to inform your creative description of a vivid, visually rich and immersive scene. The prompt should read like concept art narration, elegant and imaginative, with no camera tags or formatting.\\nPlease describe more details of picture, image, and styles, realistic portrait, digital artwork, CGI pictures, at list 150 words.\\nJust return a **single descriptive sentence**.\\n'}], 'model': 'gpt-4o-mini', 'stream': False}{'id': 'chatcmpl-7fd7ebfb-1fa5-40a0-ae57-7d11f0f733ec', 'object': 'chat.completion', 'created': 1759384424, 'model': 'gpt-4o-mini', 'choices': [{'index': 0, 'message': {'role': 'assistant', 'content': '', 'tool_calls': None}, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}}",
+      "width": 1024,
+      "height": 1536,
+      "style": "portrait",
+      "timestamp": "2025-10-02T05:54:07.008258Z"
     }
   ]
 }
