@@ -1404,6 +1404,15 @@
       "height": 1024,
       "style": "square",
       "timestamp": "2025-10-04T22:21:51.152287Z"
+    },
+    {
+      "filename": "images/2025_10_04/2025_10_04_157.webp",
+      "thumb_path": "images/2025_10_04/2025_10_04_157_thumb.webp",
+      "prompt": "",
+      "width": 1080,
+      "height": 1920,
+      "style": "vertical-hd",
+      "timestamp": "2025-10-04T22:28:48.725762Z"
     }
   ]
 }
