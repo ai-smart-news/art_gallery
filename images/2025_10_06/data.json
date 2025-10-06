@@ -126,6 +126,15 @@
       "height": 928,
       "style": "16:9",
       "timestamp": "2025-10-06T04:42:06.926044Z"
+    },
+    {
+      "filename": "images/2025_10_06/2025_10_06_15.webp",
+      "thumb_path": "images/2025_10_06/2025_10_06_15_thumb.webp",
+      "prompt": "",
+      "width": 1080,
+      "height": 1920,
+      "style": "vertical-hd",
+      "timestamp": "2025-10-06T04:46:00.342497Z"
     }
   ]
 }
