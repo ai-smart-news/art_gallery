@@ -153,6 +153,15 @@
       "height": 1056,
       "style": "3:2",
       "timestamp": "2025-10-08T04:52:30.467636Z"
+    },
+    {
+      "filename": "images/2025_10_08/2025_10_08_18.webp",
+      "thumb_path": "images/2025_10_08/2025_10_08_18_thumb.webp",
+      "prompt": "",
+      "width": 1280,
+      "height": 1024,
+      "style": "landscape",
+      "timestamp": "2025-10-08T04:58:04.741437Z"
     }
   ]
 }
