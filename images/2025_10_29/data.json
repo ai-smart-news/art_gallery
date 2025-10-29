@@ -675,6 +675,15 @@
       "height": 1024,
       "style": "landscape",
       "timestamp": "2025-10-29T17:14:52.741809Z"
+    },
+    {
+      "filename": "images/2025_10_29/2025_10_29_76.webp",
+      "thumb_path": "images/2025_10_29/2025_10_29_76_thumb.webp",
+      "prompt": "",
+      "width": 1024,
+      "height": 1536,
+      "style": "portrait",
+      "timestamp": "2025-10-29T17:29:32.908629Z"
     }
   ]
 }
