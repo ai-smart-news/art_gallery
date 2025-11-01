@@ -828,6 +828,15 @@
       "height": 1024,
       "style": "square",
       "timestamp": "2025-11-01T15:21:42.427455Z"
+    },
+    {
+      "filename": "images/2025_11_01/2025_11_01_93.webp",
+      "thumb_path": "images/2025_11_01/2025_11_01_93_thumb.webp",
+      "prompt": "",
+      "width": 1024,
+      "height": 1024,
+      "style": "square",
+      "timestamp": "2025-11-01T15:26:11.228261Z"
     }
   ]
 }
