@@ -1080,6 +1080,15 @@
       "height": 1024,
       "style": "ultra-wide",
       "timestamp": "2025-11-07T21:34:20.083515Z"
+    },
+    {
+      "filename": "images/2025_11_07/2025_11_07_121.webp",
+      "thumb_path": "images/2025_11_07/2025_11_07_121_thumb.webp",
+      "prompt": "Amidst a vast, surreal desert landscape illuminated by a dreamlike glow, the majestic banshee queen rises, her ethereal form elegantly cloaked in flowing garments of neon rust and cobalt that shimmer under the celestial expanse, while a vortex of shimmering particles swirls around her, reflecting the brutalist architecture of the distant ruins, all viewed through an inversion prism that distorts the environment into a kaleidoscope of sharp angles and softened edges, creating a striking contrast that encapsulates both her regal presence and the haunting beauty of her desolate realm.",
+      "width": 1280,
+      "height": 1024,
+      "style": "landscape",
+      "timestamp": "2025-11-07T21:41:04.626969Z"
     }
   ]
 }
