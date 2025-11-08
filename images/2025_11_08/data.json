@@ -1053,6 +1053,15 @@
       "height": 1024,
       "style": "landscape",
       "timestamp": "2025-11-08T19:11:05.658936Z"
+    },
+    {
+      "filename": "images/2025_11_08/2025_11_08_118.webp",
+      "thumb_path": "images/2025_11_08/2025_11_08_118_thumb.webp",
+      "prompt": "In a misty dawn, a fire spirit maiden elegantly glides down a fog-lit corridor, her low-poly form shimmering with hues of mulberry and storm white, as delicate burning petals spiral around her, illuminating the ethereal scene with a warm, gentle glow that contrasts beautifully against the soft, dreamy haze.",
+      "width": 1024,
+      "height": 1536,
+      "style": "portrait",
+      "timestamp": "2025-11-08T19:19:24.249739Z"
     }
   ]
 }
