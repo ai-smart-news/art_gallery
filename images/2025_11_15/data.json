@@ -918,6 +918,15 @@
       "height": 1584,
       "style": "2:3",
       "timestamp": "2025-11-15T16:37:59.631419Z"
+    },
+    {
+      "filename": "images/2025_11_15/2025_11_15_103.webp",
+      "thumb_path": "images/2025_11_15/2025_11_15_103_thumb.webp",
+      "prompt": "",
+      "width": 1080,
+      "height": 1920,
+      "style": "vertical-hd",
+      "timestamp": "2025-11-15T16:46:14.323527Z"
     }
   ]
 }
