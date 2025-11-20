@@ -1179,6 +1179,15 @@
       "height": 1920,
       "style": "vertical-hd",
       "timestamp": "2025-11-20T22:48:08.219813Z"
+    },
+    {
+      "filename": "images/2025_11_20/2025_11_20_132.webp",
+      "thumb_path": "images/2025_11_20/2025_11_20_132_thumb.webp",
+      "prompt": "",
+      "width": 1584,
+      "height": 1056,
+      "style": "3:2",
+      "timestamp": "2025-11-20T22:50:34.598381Z"
     }
   ]
 }
