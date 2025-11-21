@@ -522,6 +522,15 @@
       "height": 1024,
       "style": "landscape",
       "timestamp": "2025-11-21T11:27:31.779434Z"
+    },
+    {
+      "filename": "images/2025_11_21/2025_11_21_59.webp",
+      "thumb_path": "images/2025_11_21/2025_11_21_59_thumb.webp",
+      "prompt": "",
+      "width": 1280,
+      "height": 1024,
+      "style": "landscape",
+      "timestamp": "2025-11-21T11:35:14.657796Z"
     }
   ]
 }
