@@ -450,6 +450,15 @@
       "height": 1024,
       "style": "square",
       "timestamp": "2025-11-22T09:29:41.850651Z"
+    },
+    {
+      "filename": "images/2025_11_22/2025_11_22_51.webp",
+      "thumb_path": "images/2025_11_22/2025_11_22_51_thumb.webp",
+      "prompt": "The model does not exist in our api at the moment.\nTo request a model please join: https://discord.gg/9g5wkVTn8s",
+      "width": 928,
+      "height": 1664,
+      "style": "9:16",
+      "timestamp": "2025-11-22T09:32:10.103010Z"
     }
   ]
 }
