@@ -216,6 +216,15 @@
       "height": 1328,
       "style": "1:1",
       "timestamp": "2025-11-28T07:40:45.160180Z"
+    },
+    {
+      "filename": "images/2025_11_28/2025_11_28_25.webp",
+      "thumb_path": "images/2025_11_28/2025_11_28_25_thumb.webp",
+      "prompt": "Here's a single-sentence AI image prompt, aiming for high-detail generation and incorporating all your inspirations:\n\n**Beneath a bruised, lavender-silver sky bleeding into wine-dark shadows, a creature of fractured grace \u2013 antlers like shattered chandeliers and a coat shimmering with spectral dust \u2013 rises from a field of withered blooms, its gaze an ancient sorrow observed from a worm\u2019s-eye view through a veil of impossibly thin, cracked glass, evoking a gothic lament rendered in hyperrealistic detail as if sculpted from moonlight and regret, a digital painting with volumetric lighting and subsurface scattering emphasizing the delicate translucence of its mutated form, complete with intricate textural work on the fur and a melancholic atmosphere akin to a pre-Raphaelite painting infused with the unsettling beauty of biological anomaly \u2013 a CGI masterpiece showcasing both vulnerability and an unnerving majesty, reminiscent of concept art for a dark fairytale, highly detailed, 8k resolution, photorealistic, octane render, atmospheric perspective, dramatic chiaroscuro.**\n\n\n\nThis prompt attempts to:\n\n*   **Be narrative:** It doesn\u2019t *list* elements (\u201cmutant doe, gothic style\u201d), but *describes* a scene containing them.\n*   **Focus on Feeling:** Words like \"bruised,\" \"spectral,\" \"sorrow,\" \"lament,\" \"regret\", and \"unnerving\" aim to guide the AI's focus toward the desired eerie mood.\n*   **Employ Strong Visual Language:** Phrases like \"antlers like shattered chandeliers\" and \"sculpted from moonlight\" provide detailed visual cues.\n*   **Leverage Technical Terms:** \"Volumetric lighting,\" \"subsurface scattering,\" \"octane render,\" and \"8k resolution\" explicitly tell the model to prioritize realism and detail.\n*   **Hint at Artistic Influences:** Referencing pre-Raphaelites & fairytales suggests a rich artistic style.\n*   **Maintain Flow:** It\u2019s one long, flowing sentence designed to be parsed effectively by a powerful AI.",
+      "width": 1280,
+      "height": 1024,
+      "style": "landscape",
+      "timestamp": "2025-11-28T07:44:16.499826Z"
     }
   ]
 }
