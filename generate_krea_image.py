@@ -224,7 +224,7 @@ Just return a **single descriptive sentence**.
 client = Client_g4f()
 
 response = client.chat.completions.create(
-    model="gpt-4o-mini",
+    model="gemma-3-27b-it",
     messages=[
         {
             "role": "user",
