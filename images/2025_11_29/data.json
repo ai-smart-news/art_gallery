@@ -918,6 +918,15 @@
       "height": 1536,
       "style": "portrait",
       "timestamp": "2025-11-29T18:43:44.041860Z"
+    },
+    {
+      "filename": "images/2025_11_29/2025_11_29_103.webp",
+      "thumb_path": "images/2025_11_29/2025_11_29_103_thumb.webp",
+      "prompt": "Here's a single descriptive sentence AI image prompt, aiming for high-detail generation based on your inspiration:\n\n**An ethereal sovereign draped in coalescing shadows and starlight ascends from a fractured obsidian throne as a celestial occlusion washes the scene in cool, bioluminescent hues, her form dissolving into intricate fractal patterns with each passing moment, a dynamic vortex of energy subtly distorting the very fabric of reality around her, revealing fleeting glimpses of ancient, forgotten constellations within the deep, velvety blues and pulsing, spectral whites \u2013 a hyperrealistic digital painting rendered with photorealistic skin textures, intricate jewelry crafted from solidified light, and flowing garments detailed with microscopic, rune-like etchings, evoking a sense of immense power and melancholic beauty, utilizing subsurface scattering to emphasize the otherworldly glow and volumetric lighting to create a palpable atmosphere, inspired by the pre-Raphaelite painters and the fantastical world-building of Frank Frazetta, showcasing a dramatic composition with a shallow depth of field and a focus on the queen\u2019s compelling, sorrowful expression, presented as a highly-detailed 8k CGI artwork with global illumination and advanced ray tracing for ultimate realism and immersion.**\n\n\n\n**Details breakdown to meet the 150+ word requirement:**\n\nThis prompt aims for a *realistic portrait* pushed towards the fantastical. The specification of \u201cphotorealistic skin textures\u201d and \u201cmicroscopic rune-like etchings\u201dspecifically targets high-resolution visual detail.  The requested *digital artwork* and *CGI pictures* leans into a highly polished, manufactured aesthetic. \n\nThe use of \"subsurface scattering\" and \u201cvolumetric lighting\u201d are technical details requesting specific rendering effects to increase realism and the impression of an intense light source (the eclipse).  Reference to artistic styles (Pre-Raphaelite, Frazetta) guides the AI toward certain compositional and aesthetic choices relating to mood, colour, and form. \n\n\u201cShallow depth of field\u201d aids in drawing focus to the flame queen, and the \"compelling, sorrowful expression\u201d emphasizes narrative within the visual representation. \u201c8k\u201d and inclusion of \u201cglobal illumination,\" \"ray tracing\" are tags to maximize the level of detail and artificial realism. The overall mood sought is a blend of power and vulnerability, enhanced by the cool colour palette and the contrasting blue/white tones, creating an image intended to feel both majestic and haunting.",
+      "width": 1920,
+      "height": 1024,
+      "style": "ultra-wide",
+      "timestamp": "2025-11-29T18:54:26.273626Z"
     }
   ]
 }
