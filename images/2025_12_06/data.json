@@ -990,6 +990,15 @@
       "height": 1024,
       "style": "ultra-wide",
       "timestamp": "2025-12-06T18:16:01.505947Z"
+    },
+    {
+      "filename": "images/2025_12_06/2025_12_06_111.webp",
+      "thumb_path": "images/2025_12_06/2025_12_06_111_thumb.webp",
+      "prompt": "A solitary figure sculpted from ancient, fractured ivory and weathered stone stands shimmering within a haze, their form barely discernible through a rain-streaked window as an unnatural, cold light bleeds *from* the horizon, fracturing into ethereal flares and casting long, distorted shadows across a landscape of crumbling architecture, the entire scene rendered with a delicate, glitching texture reminiscent of decaying data and the weight of forgotten ages, evoking a profound sense of melancholy and fragile power\u2014imagine a hyperrealistic digital painting, highly detailed with subsurface scattering on the golem\u2019s mineral composition, intricate cracks revealing faint luminescence within, and subtle chromatic aberration mimicking lens distortion adding to the otherworldly feel, the aesthetic blending the raw beauty of organic decay with the unsettling precision of digital corruption, akin to a lost frame from a future archaeological dig, pushing the boundaries of photorealism while maintaining an undeniably artistic and haunting quality\u2014achieved through complex ray tracing and advanced material simulations for convincingly realistic textures, complete with dust motes suspended in the atmospheric perspective and the quiet suggestion of ongoing disintegration.",
+      "width": 1584,
+      "height": 1056,
+      "style": "3:2",
+      "timestamp": "2025-12-06T18:22:00.673113Z"
     }
   ]
 }
