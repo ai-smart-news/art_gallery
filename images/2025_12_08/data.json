@@ -135,6 +135,15 @@
       "height": 1104,
       "style": "4:3",
       "timestamp": "2025-12-08T05:46:00.926892Z"
+    },
+    {
+      "filename": "images/2025_12_08/2025_12_08_16.webp",
+      "thumb_path": "images/2025_12_08/2025_12_08_16_thumb.webp",
+      "prompt": "Here's a single-sentence AI image prompt, aiming for high-detail generation, inspired by your creative direction:\n\n**A defiant beauty, sculpted from moonlight and grit, gazes back from a fractured reflection within a rain-slicked alley, her presence a haunting blend of delicate ivory and raw concrete textures, illuminated by flickering embers that dance across a silken mane and expose the sharp angles of her face \u2013 a timeless rebellion caught in the ephemeral swirl of dust motes suspended like captured stars, evoking both vulnerability and fierce independence within a melancholic, romantic atmosphere, rendered with photorealistic detail and a subtly grainy texture akin to vintage film, pushing the boundaries between feral power and fragile grace.** \n\n---\n\n**Further details expanding on the prompt's intention (as requested - exceeding 150 words):**\n\nThis prompt aims to generate a highly detailed, realistic portrait of a female werewolf \u2013 presented not as monstrous, but as a tragically beautiful and complex figure.  The \"punk romantic\" aspect informs the juxtaposition of traditionally delicate elements (silk, ivory, moonlight) with harsh, urban textures (concrete, rain-slicked alley, grit).  It's about a raw, untamed spirit *within* a framework of delicate features.\n\nThe \"fire-lit shadows\" dictate a dramatic, chiaroscuro lighting scheme; not bright and cheerful, but intimate and revealing, casting long, dynamic shadows.  The color palette is specifically limited to drive a certain mood \u2013 the ivory representing purity/vulnerability, and the concrete grounding the image in a harsh reality. \n\n\u201cTime-locked particles\u201d are meant to manifest as subtle dust motes or shimmering effects, suggesting the subject exists outside of linear time, a creature of myth and legend. The \u201clow glow from reflection\u201d encourages the AI to focus on specular highlights and reflections, adding depth and complexity. \n\nThe desired output leans towards hyperrealism, aspiring to digital artwork quality previously only achievable with extensive CGI renders \u2013 think AAA game character concept art or a high-end movie promotional piece.  We're aiming for a level of detail where individual strands of fur, the texture of skin, and the imperfections of the alleyway are all readily visible. The final aesthetic should be both conceptually striking and technically impressive.",
+      "width": 1080,
+      "height": 1920,
+      "style": "vertical-hd",
+      "timestamp": "2025-12-08T05:50:19.643478Z"
     }
   ]
 }
