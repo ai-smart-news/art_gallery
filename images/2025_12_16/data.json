@@ -342,6 +342,15 @@
       "height": 1024,
       "style": "landscape",
       "timestamp": "2025-12-16T09:58:21.919918Z"
+    },
+    {
+      "filename": "images/2025_12_16/2025_12_16_39.webp",
+      "thumb_path": "images/2025_12_16/2025_12_16_39_thumb.webp",
+      "prompt": "A solitary figure draped in layered, violet robes\u2014seemingly woven from storm clouds and regret\u2014glides backward through a cathedral of fractured obsidian, illuminated by the pulsing veins of contained energy that crackle around her like a divine aurora, her face obscured by a cowl yet radiating an ancient, otherworldly serenity as trails of smoky, feather-like particles drift and coalesce in her wake, hinting at revelations unfolding in the echoing, impossible geometry of the space, evoking a sense of both profound isolation and terrifying power within a realm where the boundaries of reality dissolve into shades of plum and the electric ghost of forgotten languages. \n\n**(Detailed breakdown for image generation context - *not* part of the prompt*):**\n\nThis prompt aims for a highly detailed, realistic yet surreal digital painting. The \"cathedral of fractured obsidian\" suggests complex, non-Euclidean architecture \u2013 broken angles, impossible perspectives.  \u201cPlasma arcs\u201d aren\u2019t just light; they are integral parts of the environment *and* potentially interacting with the figure.  The \"smoke feather mix\" asks for a complex particle effect, something delicate against the harsh obsidian and plasma. The \"reverse tracking shot\" idea is *implied* through the composition \u2013 the figure receding, details sharpening as if the view is moving *with* the environment. \n\nThe style is intended to be a current take on surrealism, borrowing from artists like HR Giger and Zdzis\u0142aw Beksi\u0144ski, but cleaned up for digital rendering. Expect high subsurface scattering on the robes, complex reflections on the obsidian, and intense bloom from the plasma.  Rendering techniques should focus on photorealistic textures \u2013 fabric, stone, energy \u2013 and volumetric lighting to create a truly immersive atmosphere. Aim for a cinematic, high-resolution image -- 8k or higher -- with detailed skin textures and a subtle depth of field.",
+      "width": 1920,
+      "height": 1024,
+      "style": "ultra-wide",
+      "timestamp": "2025-12-16T10:16:04.884761Z"
     }
   ]
 }
