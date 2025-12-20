@@ -522,6 +522,15 @@
       "height": 1024,
       "style": "square",
       "timestamp": "2025-12-20T10:57:52.501621Z"
+    },
+    {
+      "filename": "images/2025_12_20/2025_12_20_59.webp",
+      "thumb_path": "images/2025_12_20/2025_12_20_59_thumb.webp",
+      "prompt": "Here's a single descriptive sentence AI image prompt, aiming for high detail and inspired by your keywords:\n\n\u201cAn immense, bioluminescent sovereign of the abyss drifts through nebulae sculpted like ornate cathedral arches, her form a baroque extravagance of flowing fins and pearl-encrusted cartilage, illuminated by the ghostly bloom of diffused projection mapping casting dream violet and fog green across rippling, visualized soundscapes that emanate from her colossal presence, the perspective rising from below to emphasize her ethereal majesty and the sheer scale of her celestial reign, rendered with hyperrealistic detail as a digital painting evoking the textures of oil and the luminescence of deep-sea creatures, feeling like a still from an epic, otherworldly opera \u2013 highly detailed, intricate, cinematic lighting, subsurface scattering, volumetric effects, art by Greg Rutkowski and Ismail Inceoglu, octane render, 8k resolution, photorealistic, ultra quality, extremely detailed CG unity 8k wallpaper, trending on artstation.\u201d\n\n\n\nThis prompt attempts to encapsulate the feeling and detail you requested without simply listing elements. It aims for a poetic description that will steer the AI towards a compelling, visually rich image. It\u2019s long, which can often help with more complex scenes, and includes artist names known for detailed fantasy art to further influence the style. The technical terms (octane render, 8k, etc.) aim for high-quality output.",
+      "width": 1080,
+      "height": 1920,
+      "style": "vertical-hd",
+      "timestamp": "2025-12-20T11:10:16.340592Z"
     }
   ]
 }
