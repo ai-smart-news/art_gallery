@@ -81,6 +81,15 @@
       "height": 1024,
       "style": "ultra-wide",
       "timestamp": "2025-12-21T04:34:19.627768Z"
+    },
+    {
+      "filename": "images/2025_12_21/2025_12_21_10.webp",
+      "thumb_path": "images/2025_12_21/2025_12_21_10_thumb.webp",
+      "prompt": "Here's a single descriptive sentence AI image prompt, aiming for high detail and evocative imagery, inspired by your criteria:\n\n\u201cA regal feline guardian, sculpted from cool, veined stone and crowned with ancient authority, presides over a shadowed ascent bathed in the spectral luminescence of distant constellations, the air thick with the fading embers of twilight and a low, smoldering crimson that clings to the architectural curves framing her immortal vigil \u2013 a scene rendered with the meticulous detail of concept art, radiating an ethereal glow and hinting at forgotten prophecies whispered on the starlight.\u201d \n\n---\n\nHere\u2019s a breakdown of how this prompt aims to deliver on your requested details (more than 150 words as you requested, detailing the intended output): \n\nThis prompt is crafted to generate a highly detailed, realistic yet fantastical image. The \u201cregal feline guardian\u201d immediately establishes the core subject \u2013 the sphinx queen \u2013 without simply stating \u201csphinx.\u201d Using \u201ccool, veined stone\u201d and \u201cancient authority\u201d subtly bring in the marble material and her powerful presence.  The phrase \"shadowed ascent\" evokes the angled stairwell framing and adds a sense of mystery. \n\n\u201cSpectral luminescence of distant constellations\u201d directly addresses the digital starlight lighting but does so poetically. The color palette is blended within this line and further reinforced by \u201cfading embers of twilight and a low, smoldering crimson\u201d. This avoids a flat listing of colors and integrates them into the atmospheric description. \n\nSpecifying \u201cmeticulous detail of concept art\u201d is a crucial instruction for high-detail generators; it implies complex textures, subtle shading, and a polished, finished look suited for a visual development piece. Describing the scene as \u201cradiating an ethereal glow\u201d reinforces the mood and adds a soft, dreamlike quality.  Finally, \u201chinting at forgotten prophecies\u201d adds narrative depth and encourages the AI to incorporate subtle visual storytelling elements \u2013 perhaps weathered inscriptions, symbolic motifs, or a subtly melancholic expression on the sphinx\u2019s face. \n\nThe intention is a CGI-quality image akin to a digital painting, emphasizing realism in texture (the marble) and form while remaining grounded in a fantastical aesthetic. The overall effect should be grandiose, imposing, and emotionally resonant, suitable for a keyframe from a high-fantasy film or a striking illustration for a mythic tale.  The image will ideally avoid appearing overly photographic; the goal is a convincing *depiction* of reality through artistic interpretation.",
+      "width": 1024,
+      "height": 1536,
+      "style": "portrait",
+      "timestamp": "2025-12-21T04:42:08.226899Z"
     }
   ]
 }
