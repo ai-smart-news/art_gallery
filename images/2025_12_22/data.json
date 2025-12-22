@@ -342,6 +342,15 @@
       "height": 1024,
       "style": "square",
       "timestamp": "2025-12-22T10:34:39.975230Z"
+    },
+    {
+      "filename": "images/2025_12_22/2025_12_22_39.webp",
+      "thumb_path": "images/2025_12_22/2025_12_22_39_thumb.webp",
+      "prompt": "Here's a single descriptive sentence, aiming for a high-detail image generation prompt fitting your criteria:\n\nA figure of ethereal fragility, bathed in the heat-signature glow of a hidden bloom, rises from cracked earth as wings of fractured light and polished chrome unfurl against a sky bleeding from rose to smoldering ember, the very air around her shimmering with unseen energies and a sense of ancient, digital sorrow, depicted as a hyperrealistic digital painting with meticulous attention to subsurface scattering on translucent skin, volumetric lighting highlighting the delicate filigree of her cybernetic extensions, and a painterly texture reminiscent of contemporary surrealism \u2013 leaning heavily into the aesthetic of Greg Rutkowski and Artgerm, achieving photorealistic detail comparable to a high-resolution CGI render with intricate reflections and a slightly desaturated color palette emphasizing the infrared shimmer, powered by octane render, 8k, highly detailed, dramatic composition, evocative of both vulnerability and immense power, capturing a tragic beauty that feels both futuristic and primordial, pushing the boundaries of photorealism with subtle distortions and organic imperfections.",
+      "width": 1024,
+      "height": 1536,
+      "style": "portrait",
+      "timestamp": "2025-12-22T10:40:24.852636Z"
     }
   ]
 }
