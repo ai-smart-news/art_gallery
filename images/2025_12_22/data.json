@@ -675,6 +675,15 @@
       "height": 1920,
       "style": "vertical-hd",
       "timestamp": "2025-12-22T19:12:11.465040Z"
+    },
+    {
+      "filename": "images/2025_12_22/2025_12_22_76.webp",
+      "thumb_path": "images/2025_12_22/2025_12_22_76_thumb.webp",
+      "prompt": "Within a cavernous, geometrically fractured sanctuary reflecting infinitely upon polished obsidian planes, a figure radiating quiet authority stands amidst bioluminescent, cyan-tinged growths and encrustations of metallic moss, illuminated by the erratic pulse of unseen energies \u2013 a devotional space dissolving into crystalline shards and echoing voids, hinting at ancient rites and the weight of forgotten power, rendered with the precision of calculated form and the somber beauty of decaying grandeur, evoking a sense of both reverence and unsettling stillness, reminiscent of a forgotten deity\u2019s inner chamber.\n\n\n\nHere\u2019s a breakdown of why this prompt works for high-detail models and meets the requirements:\n\n*   **Immersive & Narrative:** It *tells a story*, rather than listing elements. This encourages the AI to build a world, not just arrange objects.\n*   **Abstract Language:** Words like \"fractured,\" \"dissolving,\" \"voids,\" and \"calculated form\" speak to the hard-edge abstraction style without explicitly stating it.\n*   **Subtle Color Guidance:** \"Cyan-tinged growths\" and \"polished obsidian planes\" guide the color palette without being overly prescriptive.\n*   **Mood & Lighting:** \"Erratic pulse,\" \"decaying grandeur,\" and \"unsettling stillness\" establish the desired atmosphere. \"Bioluminescent\" hints at the flickering lights.\n*   **Details Implied:** \"Metallic moss\" is included, and the description of the growths encourages detailed textures. The \"authority\" of the figure suggests elaborate adornments, but leaves the specifics to the AI.\n*   **Perspective Hint:** The \"reflecting infinitely\" and \"polished obsidian planes\" strongly suggest the mirrored environment.\n*   **Length & Complexity:** The sentence is long and detailed, providing the AI with ample information to create a rich, complex image. It's not *too* lengthy that the AI could lose focus, but it's complex enough to demand detail.\n\n\n\nThis prompt is designed for a model capable of understanding nuanced descriptions and generating something beyond a literal interpretation of keywords. The intent is to inspire creative interpretation, producing something unique and visually arresting.",
+      "width": 1328,
+      "height": 1328,
+      "style": "1:1",
+      "timestamp": "2025-12-22T19:16:14.413969Z"
     }
   ]
 }
