@@ -180,6 +180,15 @@
       "height": 1024,
       "style": "square",
       "timestamp": "2025-12-25T07:02:46.831213Z"
+    },
+    {
+      "filename": "images/2025_12_25/2025_12_25_21.webp",
+      "thumb_path": "images/2025_12_25/2025_12_25_21_thumb.webp",
+      "prompt": "Here's a single descriptive sentence AI image prompt, aiming for high detail and evocative imagery, building on your inspirations:\n\n\u201cA fractured silhouette of devotion emerges from monolithic concrete, bathed in the ethereal spill of a crescent moon, revealing a figure both sacred and synthetic where decaying neon rust bleeds into the cold geometry of cobalt structures, hinting at phantom appendages trailing from a weathered form\u2014a digital painting rendered with photorealistic detail, employing subsurface scattering on metallic components and volumetric lighting to accentuate the dust motes dancing in the spectral glow, showcasing intricate paneling and worn textures reminiscent of brutalist architecture, all captured in a hyperdetailed 8k resolution with subtle chromatic aberration and a shallow depth of field focusing on the interplay of light and decaying technology\u2014a character study exploring transhumanism and the lingering echoes of faith constructed as cinematic concept art, leaning into the aesthetic of *Bladerunner 2049* and the detailed character work of *Cyberpunk 2077*, prioritizing realism in material reflections and a grounded sense of scale, with the overall composition evoking a melancholic beauty and quiet introspection, utilizing Octane render engine for final output.\u201d",
+      "width": 1080,
+      "height": 1920,
+      "style": "vertical-hd",
+      "timestamp": "2025-12-25T07:16:06.669075Z"
     }
   ]
 }
