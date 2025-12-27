@@ -891,6 +891,15 @@
       "height": 1536,
       "style": "portrait",
       "timestamp": "2025-12-27T18:57:18.003816Z"
+    },
+    {
+      "filename": "images/2025_12_27/2025_12_27_100.webp",
+      "thumb_path": "images/2025_12_27/2025_12_27_100_thumb.webp",
+      "prompt": "Here's a single descriptive sentence AI image prompt, aiming for high-detail generation and incorporating all the provided inspiration:\n\n**A procession of antiquated, biomechanical figures\u2014their forms subtly echoing primate anatomy\u2014advances through a desolate, metallic landscape bathed in the ethereal glow of a lunar corona, their polished, fluid surfaces reflecting a palette of aged gold and weathered steel as they exhale wisps of shimmering, particulate haze, the scene unfolding with dramatic intensity via a rapidly approaching perspective that emphasizes the interplay of light and shadow across intricately detailed circuitry and the suggestion of sacred, yet decaying, ritual.** \n\n---\n\n**Detailed Explanation (more than 150 words, as requested - this does NOT go *in* the prompt, but explains the intent):**\n\nThis prompt aims for a stunning digital artwork reminiscent of high-end CGI and concept art. The \"biomechanical figures\" are intended to be the machine monkeys, but phrased to hint at their nature rather than state it directly. \"Antiquated\" implies a sense of age and history. \"Fluid surfaces\" translates the \"liquid chrome\" style \u2013 it needs to look like metal that *flows* rather than is rigidly shaped. \n\nThe \u201clunar corona\u201d evokes the \"moon halo\" lighting, creating a soft, dramatic and atmospheric mood.  \u201cAged gold and weathered steel\u201d is a nuanced way to establish the ochre and grey steel color scheme, creating visual richness and depth. \n\n\u201cShimmering, particulate haze\u201d visually represents the \"silicon smoke\"\u2013 it's descriptive and indicates a delicate, almost magical effect.  \"Rapidly approaching perspective\" is the \"backlight zoom\" \u2013 it creates visual dynamism and a sense of immersion. The emphasis on \u201cintricately detailed circuitry\u201d pushes for high resolution, and the \u201csacred, yet decaying, ritual\u201d wording adds a narrative hint, urging the AI to create something more than just cool visuals, suggesting history, purpose, and a melancholic beauty.  The prompt purposely avoids terms like \"photorealistic\" to allow the AI more creative freedom within the CGI/digital art space, aiming for a unique, striking, and somewhat surreal image.",
+      "width": 1024,
+      "height": 1536,
+      "style": "portrait",
+      "timestamp": "2025-12-27T19:10:24.019622Z"
     }
   ]
 }
