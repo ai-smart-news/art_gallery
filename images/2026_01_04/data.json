@@ -405,6 +405,15 @@
       "height": 1920,
       "style": "vertical-hd",
       "timestamp": "2026-01-04T11:23:21.225576Z"
+    },
+    {
+      "filename": "images/2026_01_04/2026_01_04_46.webp",
+      "thumb_path": "images/2026_01_04/2026_01_04_46_thumb.webp",
+      "prompt": "Here's a single descriptive sentence AI image prompt, aiming for high detail and incorporating your inspirations:\n\n**A solitary figure, cloaked in shadows and echoing with ancient purpose, emerges from a swirling abyss of indigo and crimson, her form partially illuminated by a collapsing star of light that pulls at the very fabric of the scene, leaving trails of incandescent energy like spectral ribbons tracing her swift passage along a crumbling, stone-carved wall \u2013 a dramatic interplay of light and dark rendered with the meticulous detail of a classical master, evoking a sense of both power and melancholic grace, as if witnessing a fleeting moment ripped from a forgotten myth, painted in the style of Caravaggio meets modern digital illustration, pushing hyperrealism with subtle imperfections reflecting the raw emotion and dynamic energy of the huntress's pursuit, utilizing subsurface scattering to highlight the delicate features of her face and the textures of her worn garments, perfect for a large-scale print showing her determination and power.**\n\n\n\nThis prompt aims to be evocative without being overly prescriptive, letting the AI interpret and build upon the core elements. It blends art history with modern digital techniques to suggest a specific *feel* and level of detail, and suggests qualities that you might want to see (subsurface scattering, textures etc.). It indicates a desired outcome of high resolution suitable for a print, subtly directing the AI's focus to a certain quality level.",
+      "width": 1280,
+      "height": 1024,
+      "style": "landscape",
+      "timestamp": "2026-01-04T11:28:28.604094Z"
     }
   ]
 }
