@@ -459,6 +459,15 @@
       "height": 1024,
       "style": "landscape",
       "timestamp": "2026-01-10T11:23:08.424846Z"
+    },
+    {
+      "filename": "images/2026_01_10/2026_01_10_52.webp",
+      "thumb_path": "images/2026_01_10/2026_01_10_52_thumb.webp",
+      "prompt": "Here's a single-sentence AI image prompt, aiming for high detail and evocative imagery, based on your specifications:\n\n**Within a swirling vortex of sapphire and sulfurous haze, a regal figure\u2014her form partially dissolving into translucent echoes of past selves\u2014presides over a metropolis built amongst the clouds, a breathtaking labyrinth of brass and gears perpetually illuminated by the luminous, toxic efflorescence of the city\u2019s heart, all framed by the intricate, organic curvature of a colossal, observing eye.**\n\n---\n\n**Further Details for Image Generation (Not part of the prompt, for context only):**\n\nThis prompt aims for a hyperrealistic digital painting, leaning into CGI aesthetics to achieve intricate detail. The \"skyborne city\" should be a believable, functional steampunk construction \u2013 think colossal clockwork mechanisms, riveted metal structures, airships tethered to towers, and glowing pipes carrying colored gases. The queen\u2019s attire is elaborate steampunk \u2013 corsets, goggles, mechanical augmentations blended with flowing fabrics, and subtle bioluminescence. \n\nThe \"ghost limbs\" are crucial: ethereal, semi-transparent versions of her arms or hands extending from her body, suggesting a fractured timeline or multiple iterations of her existence. The \"iris tunnel framing\" is the most challenging aspect; the image composition should appear *as if* the viewer is seeing the scene *through* the pupil of a gigantic, ancient eye, with intricate details in the iris itself. \n\nLighting is paramount \u2013 the smog should be realistically rendered, with light refracting through particles, causing dramatic god-rays and highlighting the metallic surfaces.  A strong emphasis on texture is needed - weathered metal, luxurious fabrics, the smooth, reflective surface of the \"iris.\"  The overall mood should be one of melancholic grandeur, hinting at a powerful but burdened ruler. Render in 8k resolution with exceptional attention to material definition and subsurface scattering where appropriate (particularly for the ghost limbs). Focus on achieving a cinematic quality, as if a still from a high-budget science fantasy film.",
+      "width": 1024,
+      "height": 1536,
+      "style": "portrait",
+      "timestamp": "2026-01-10T11:28:43.117517Z"
     }
   ]
 }
