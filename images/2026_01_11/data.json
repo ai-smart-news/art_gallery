@@ -189,6 +189,15 @@
       "height": 1920,
       "style": "vertical-hd",
       "timestamp": "2026-01-11T07:34:00.407968Z"
+    },
+    {
+      "filename": "images/2026_01_11/2026_01_11_22.webp",
+      "thumb_path": "images/2026_01_11/2026_01_11_22_thumb.webp",
+      "prompt": "Here's a single-sentence AI image prompt, aiming for high detail and fitting your criteria:\n\n**A lone figure, clad in weathered brass and patched leather, stands amidst the pulsing, ethereal glow of a subterranean engine room\u2014its architecture a fusion of Art Deco and brutalist machinery\u2014where fractured panes reveal swirling, cloud-strewn skies, the scene bathed in a spectral luminescence reminiscent of aged pearl and blushing ros\u00e9, all subtly distorted as if viewed through heat haze and shimmering, compromised containment fields, evoking a sense of both awe and impending mechanical failure, rendered with photorealistic detail, hypercomplex textures, volumetric lighting, and intricate surface imperfections, a digital painting reminiscent of a Greg Rutkowski and Ismail Inceoglu collaboration with cinematic post-processing, achieving an 8k resolution and a highly detailed character portrait emphasizing determined resolve and wind-swept hair, utilizing subsurface scattering and global illumination for a truly immersive experience, and incorporating subtle chromatic aberration for a vintage lens effect.**\n\n\n\n**Details breakdown (as requested - exceeding 150 words):**\n\nThis prompt aims for a *realistic portrait* within a larger *digital artwork* context. The intention is to create an image that appears as though generated via *CGI* rendering, but feels grounded in reality. The style pulls strongly from *dieselpunk* aesthetics \u2013 the brass/leather details, the bulky \u201cengine room\u201d architecture.  We want *hypercomplex textures* \u2013 think grime, wear-and-tear on the clothing & machinery, the unique patterns in the cracked glass (essential detail). *Volumetric lighting* is key to capturing the \"reactor core\" mood. \n\nThe prompt references artists *Greg Rutkowski* and *Ismail Inceoglu,* whose styles both excel at detailed fantasy art with strong lighting.  *8k resolution* is specified to push the AI to generate a maximum level of detail.  *:Subsurface scattering* on skin will make the character look more lifelike. *Global illumination* ensures the light interacts realistically with all surfaces. The inclusion of *chromatic aberration* subtly mimics the imperfections of older lenses, adding to the vintage, slightly unsettling mood. The aim is a visually stunning, immersive image that feels both grand and intimate \u2013 focusing on the character\u2019s expression amidst a breathtaking, decaying mechanical landscape. The *rippling perspective* is conveyed through the \"heat haze and shimmering fields\" description.",
+      "width": 928,
+      "height": 1664,
+      "style": "9:16",
+      "timestamp": "2026-01-11T07:41:44.460365Z"
     }
   ]
 }
