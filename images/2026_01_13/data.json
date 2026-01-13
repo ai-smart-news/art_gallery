@@ -225,6 +225,15 @@
       "height": 1104,
       "style": "4:3",
       "timestamp": "2026-01-13T07:25:29.477654Z"
+    },
+    {
+      "filename": "images/2026_01_13/2026_01_13_26.webp",
+      "thumb_path": "images/2026_01_13/2026_01_13_26_thumb.webp",
+      "prompt": "Here's a single descriptive sentence AI image prompt, aiming for high detail and evocative imagery, incorporating all the requested elements:\n\n\u201cA celestial figure, etched in the stark grace of ink, emerges from a fractured shaft of lunar luminescence within a decaying, geometrically impossible hallway lined with rust-colored, bas-relief glyphs depicting forgotten constellations, her form radiating a cool, electric resonance against the warm decay, perceived as if viewing her from a distorted, upside-down perspective deep within the structure\u2019s heart\u2014a digital painting rendered with hyperrealism, focusing on subtle skin textures, the intricate detail of the carvings suggesting immense age, and dynamic interplay of light and shadow reminiscent of art nouveau blended with cosmic horror, aiming for a cinematic quality with global illumination and a shallow depth of field to emphasize the figure's otherworldly beauty, utilizing advanced subsurface scattering for a soft, ethereal glow, and employing a complex material system for both the organic form of the figure and the weathered stone, generating a photorealistic yet dreamlike image with a resolution exceeding 8k, complete with atmospheric particulate matter to enhance the sense of depth and antiquity, inspired by the works of H.R. Giger and Alphonse Mucha, utilizing ray tracing for accurate light bounce and reflection, and prioritizing intricate detail rendering to give a sense of massive scale and the weight of epochs.\u201d",
+      "width": 1024,
+      "height": 1024,
+      "style": "square",
+      "timestamp": "2026-01-13T07:42:16.069397Z"
     }
   ]
 }
