@@ -135,6 +135,15 @@
       "height": 1024,
       "style": "landscape",
       "timestamp": "2026-01-13T05:40:58.022932Z"
+    },
+    {
+      "filename": "images/2026_01_13/2026_01_13_16.webp",
+      "thumb_path": "images/2026_01_13/2026_01_13_16_thumb.webp",
+      "prompt": "Here's a single-sentence AI image prompt, aiming for high detail and evocative imagery, based on your inspiration:\n\n**A solitary figure, etched with the weight of ages and radiating a melancholic grace, stands amidst the decaying heart of a forgotten power source, her form partially obscured by swirling, golden mists and the fractured geometry of failing containment, the scene illuminated by the eerie, internal luminescence of a dying star rendered visible through cracks in reality, all viewed as if through a shattered and imperfect memory reflecting a cosmos beyond.** \n\n---\n\n**Further details for image generation (as requested - not part of the prompt itself):**\n\nThis prompt is designed to generate a highly detailed, realistic portrait leaning towards digital art and CGI aesthetics. The \"living relic maiden\" should appear ageless, with subtle signs of wear and timelessness \u2013 perhaps faint, glowing markings on her skin, or garments woven from unusual, otherworldly materials. Her expression should be wistful, conveying profound loss and a burden of knowledge. \n\nThe \"dim reactor core\" isn't about visible machinery, but the *feeling* of immense, contained energy in decline \u2013 think glowing veins in dark metal, a sense of heat haze, and subtle radiation effects. \"Sky gold and fog\" implies a color scheme dominated by ochres, ambers, and pale yellows, interwoven with atmospheric fog which softens and diffuses the light.  The \"fractured lens perspective\" should manifest as distortion, chromatic aberration, and a sense of things being slightly *off* visually \u2013 a broken photographic memory. \n\nThe \u201cstarfield overlay\u201d isn\u2019t a literal starscape plastered on top, but rather the feeling that the core's decay punches holes into reality, letting glimpses of cosmic background radiation (subtle, particulate light) bleed through. The overall aesthetic should be reminiscent of *Blade Runner* meets *Annihilation* \u2013 a beautiful, haunting, and slightly unsettling image with incredible texture and detail, aiming for 8k resolution and photorealistic rendering.  Emphasis on subsurface scattering on the maiden\u2019s skin, and complex material shading on the decaying environment to enhance the believability.",
+      "width": 1104,
+      "height": 1472,
+      "style": "3:4",
+      "timestamp": "2026-01-13T05:49:25.629273Z"
     }
   ]
 }
