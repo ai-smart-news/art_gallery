@@ -351,6 +351,15 @@
       "height": 1664,
       "style": "9:16",
       "timestamp": "2026-01-17T08:48:42.246214Z"
+    },
+    {
+      "filename": "images/2026_01_17/2026_01_17_40.webp",
+      "thumb_path": "images/2026_01_17/2026_01_17_40_thumb.webp",
+      "prompt": "Here's a single descriptive sentence, aiming for a high-detail image generation prompt fitting your criteria:\n\n\u201cA sovereign draped in shattered platinum filigree and decaying crimson velvet gazes distantly from a balcony carved into the obsidian spires of a floating metropolis, her presence radiating a melancholic power as ethereal, aurora-like currents swirl around her, illuminating blossoming glyphs of psychic energy that drift from her temples like phantom flowers\u2014a portrait rendered with hyperrealism, leaning into the aesthetic of romantic decay and rebellious elegance, employing dramatic subsurface scattering on skin and fabrics, utilizing a subtly rotated perspective to emphasize the city\u2019s impossible architecture, and finished with the artistic finesse of Greg Rutkowski and Alphonse Mucha, akin to a high-resolution digital painting with intricate detail in every facet of the scene \u2013 light reflecting off polished metal, the texture of worn cloth, and the translucent quality of the blooming telepathic symbols\u2014resulting in a breathtaking, atmospheric image evoking both fragility and indomitable strength, optimized for cinematic quality and revealing a sense of loneliness amidst grandeur, resembling a CGI masterpiece.\u201d",
+      "width": 1024,
+      "height": 1536,
+      "style": "portrait",
+      "timestamp": "2026-01-17T08:55:53.041333Z"
     }
   ]
 }
