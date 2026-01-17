@@ -72,6 +72,15 @@
       "height": 1104,
       "style": "4:3",
       "timestamp": "2026-01-17T03:58:20.913775Z"
+    },
+    {
+      "filename": "images/2026_01_17/2026_01_17_09.webp",
+      "thumb_path": "images/2026_01_17/2026_01_17_09_thumb.webp",
+      "prompt": "Here's a single descriptive sentence AI image prompt, built to inspire high-detail generation, fitting your criteria:\n\n\u201cA regal figure wreathed in shadows and the chill of a dying light presides over a desolate, frost-covered expanse, her plumage echoing the bruised hues of a tempestuous sky as metallic flora clings to ancient, weathered forms, all fractured and reflected through the shards of a broken, obsidian mirror \u2013 a scene rendered with hyperrealism and the haunting atmosphere of a classic dark fantasy illustration, emphasizing intricate feather detail, subtle skin textures hinting at forgotten power, and the stark drama of a sunset bleeding into the coming night, evoking a sense of solemnity and ancient, watchful guardianship, highly detailed, 8k resolution, photorealistic, cinematic lighting, volumetric fog, octane render, dramatic composition, inspired by Brom and Frank Frazetta, digital painting, concept art.\"\n\n\n\n**Details Expanded (as requested, but *not* part of the prompt itself \u2013 this is explanation for how the prompt achieves the desired effect):**\n\nThis prompt aims for a highly detailed, realistic digital painting, approaching CGI quality. The mention of \"hyperrealism,\" \"intricate feather detail,\" and \"subtle skin textures\" guides the AI towards photorealistic rendering where applicable (depending on the model's strengths).  The terms \"8k resolution\" and \"octane render\" *suggest* a very detailed output and high-quality lighting, though some models interpret these as stylistic directives rather than strict parameters. \n\n\"Cinematic lighting\" and \"volumetric fog\" encourage dramatic, atmospheric effects; the red sunset is implied and enhanced by the \u201cbleeding into the coming night\u201d portion.  The \"shards of a broken obsidian mirror\" inform the \"shattered glass framing\" element \u2013 framing isn\u2019t instructed *as* a frame, but emerges as a reflective, fragmented composition. \n\nThe specific artist references (Brom and Frank Frazetta) act as soft style prompts, leaning into the desired dark fantasy aesthetic. \"Concept art\" helps reinforce the idea of a highly-planned visual composition, pushing toward a detailed environment and character design. The intention is a character portrait contextualized within a wider, evocative scene, emphasizing a stoic, commanding presence.  The neutral third person phrasing (\"A regal figure...\") prevents the framing being too literal.",
+      "width": 1080,
+      "height": 1920,
+      "style": "vertical-hd",
+      "timestamp": "2026-01-17T04:21:06.040440Z"
     }
   ]
 }
