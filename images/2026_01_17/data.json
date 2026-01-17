@@ -387,6 +387,15 @@
       "height": 1536,
       "style": "portrait",
       "timestamp": "2026-01-17T09:30:59.447142Z"
+    },
+    {
+      "filename": "images/2026_01_17/2026_01_17_44.webp",
+      "thumb_path": "images/2026_01_17/2026_01_17_44_thumb.webp",
+      "prompt": "Here's a single descriptive sentence AI image prompt, aiming for high detail and fitting your criteria:\n\n**A sovereign of sun-scorched wastes, wreathed in silvered vapor and adorned with ornaments of molten gold, presides over a clandestine ceremony within a ring of crackling crimson flame, her form sharply defined by dramatic light and shadow as ancient, luminescent symbols drift and pulse around her like obedient spirits, invoking a power both terrifying and beautiful \u2013 a digitally painted scene rendered with the stylistic precision of cel shading, evoking the feel of a classical heroic portrait steeped in myth and imbued with an otherworldly grace, demanding a hyperrealistic level of detail in textures \u2013 the queen's skin like wind-whipped sand, her garments flowing as if alive, the glyphs exhibiting a subtle volumetric glow \u2013 aiming for a cinematic quality, pushing the boundaries of digital art with intricate patterns and a focus on conveying raw emotional power, perfect for a high-resolution illustration destined for a fantasy epic.**\n\n\n\nHere's a breakdown of how it incorporates your requests & why it\u2019s structured this way for detailed generation:\n\n*   **Vivid Language:** Uses descriptive verbs & adjectives (\"wreathed,\" \"molten,\" \"crackling\") to create a strong visual foundation.\n*   **Implied Elements:** \u201cSovereign of sun-scorched wastes\u201d implies the desert banshee queen. \"Silvered vapor\" & \"molten gold\" define the color palette without directly stating it. \u201cRing of crimson flame\u201d defines the lighting/mood. \u201cAncient, luminescent symbols\u201d dictate the hovering glyphs.\n*   **Art Style Integration:** Explicitly asks for \"cel shading\" and frames the scene as a \u201cdigitally painted scene.\u201d\n*   **Perspective:** \u201cPresides over\u201d & the overall tone suggest a heroic center-focus.\n*   **Details & Quality:** Pushes for \u201chyperrealistic level of detail in textures,\" \"volumetric glow,\u201d and a \u201ccinematic quality.\u201d The length of the sentence allows inclusion of numerous descriptive elements.\n*   **No Camera Tags/Formatting:** Keeps it purely descriptive.\n*   **CGI/Artwork focus:** Specifically calls for a visual characteristic for rendering, like a \"classical heroic portrait\".\n\n\n\nThis prompt is designed to give an AI model a rich, immersive concept to interpret, leading to a highly detailed and artistic image. It relies on evocative language to convey the *feeling* of the image rather than just listing its components.",
+      "width": 1280,
+      "height": 1024,
+      "style": "landscape",
+      "timestamp": "2026-01-17T09:33:57.480876Z"
     }
   ]
 }
