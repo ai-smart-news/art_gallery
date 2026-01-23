@@ -45,6 +45,15 @@
       "height": 1104,
       "style": "4:3",
       "timestamp": "2026-01-23T03:17:58.868905Z"
+    },
+    {
+      "filename": "images/2026_01_23/2026_01_23_06.webp",
+      "thumb_path": "images/2026_01_23/2026_01_23_06_thumb.webp",
+      "prompt": "Here's a single descriptive sentence AI image prompt, aiming for high detail and based on your specifications:\n\n\u201cA solitary figure, draped in stark white and radiating an inner fire, presides over a fractured reality where crimson light bleeds from glyphs carved into a polished, obsidian-like floor and ceiling, the scene reflecting infinitely in distorted, mirrored planes, casting a chilling, metallic sheen across her solemn face and intricate, ritualistic adornments, evoking the atmosphere of a forgotten ceremony steeped in both power and glacial reverence, rendered with the textural richness and luminosity of a classical oil painting, subtly hinting at ancient, volcanic origins and the delicate balance between creation and destruction.\u201d\n\n\n\n**Details of Picture, Image, and Styles (150+ words - as requested, but this is *not* part of the prompt itself):**\n\nThis prompt is geared toward generating a highly detailed, realistic portrait within a surreal and fantastical environment. The core aesthetic leans heavily into a digital oil painting style \u2013 think heavy brushstrokes simulated through CGI, but with the depth of color and subtle imperfections of real oil paint.  We are aiming for hyperrealism in the depiction of the priestess \u2013 skin texture, the weave of fabric, the glint of metallic detailing on garments or jewelry. \n\nThe mirrored environment introduces complexity and visual interest; it's not a simple reflection, but a distortion, suggesting a broken or otherworldly dimension.  The \u201cflaming runes\u201d should be integrated organically, perhaps glowing *through* the floor/ceiling material.  \n\nCGI techniques would be crucial for achieving the believable reflections and the smooth, polished look of the obsidian surfaces.  Color grading will be vital; we want to exaggerate the contrast between the 'lava red\u2019 and \u2018feather white\u2019, creating dramatic shadows and highlights. The overall mood should feel weighty and ceremonial, with a touch of unsettling beauty. Proper lighting techniques (ray tracing and global illumination) should be applied to recreate the \u2018cold steel glint\u2019 and enhance the realism. The intention is to generate an image resembling high-end concept art for a fantasy film or game.",
+      "width": 1024,
+      "height": 1536,
+      "style": "portrait",
+      "timestamp": "2026-01-23T03:52:51.214824Z"
     }
   ]
 }
